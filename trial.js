@@ -1,5 +1,5 @@
 $(document).ready(function() {
     $('#notready').click(function(){
-         $('#notready').fadeOut(1000);
+      $('#notready').effect('bounce', {times:3}, 500);
     });
 });
