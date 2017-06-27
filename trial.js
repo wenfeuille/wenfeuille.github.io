@@ -1,5 +1,8 @@
-$(document).ready(function() {
-    $('#notready').click(function(){
-      $('#notready').effect('bounce', {times:3}, 500);
-    });
+$(document).ready(function(){
+  var $jqName = $('.name');
+  var $jqValue = $('.jqValue');
+  
+  $('div').click(function(){
+        $jqValue.html('stupid' + ' ' + $jqName.val());
+  });
 });
