@@ -1,7 +1,7 @@
 $(document).ready(function(){
   var $jqName = $('.name');
   var $jqValue = $('.jqValue');
-  var stupids = ['michael', 'david', 'huy'];
+  var stupids = ['michael', 'david', 'huy', 'george', 'gay'];
 
   
   $('div').click(function(){
@@ -13,6 +13,8 @@ $(document).ready(function(){
       else{
         $jqValue.html($jqName.val());
       }
-      
-  
+        
     }
+
+  });
+});
