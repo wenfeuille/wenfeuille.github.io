@@ -4,12 +4,6 @@ $(document).ready(function(){
   var stupids = ['michael', 'david', 'huy', 'george'];
   var list = [];
   
-  $('#addName').click(function(){
-    $('#winnie').append("<div></div>" + form); 
-    numForms++;
-    console.log(numForms);
-  });
-
   $('#submit').click(function(){
   
   var $jqName = $('#name option:selected').text();
@@ -25,10 +19,15 @@ $(document).ready(function(){
   }
   
   });
-
   
   var form = "<form>Enter your name: <select><option>michael</option><option>david</option><option>huy</option><option>george</option></select></form>";
   var numForms = 1;
+  
+  $('#addName').click(function(){
+    $('#winnie').append("<div></div>" + form); 
+    numForms++;
+    console.log(numForms);
+  });
   
 
 });
