@@ -1,7 +1,7 @@
 $(document).ready(function(){
   
   var $jqValue = $('.jqValue');
-  var stupids = ['michael', 'david', 'huy', 'george'];
+  var stupids = ['klaus', 'david', 'huy', 'george'];
   var list = [];
   var choice;
   var numForms = 0;
@@ -43,13 +43,20 @@ $(document).ready(function(){
           list.push(currentChoice);
           
       }
+    
+      for (j=0; j<list.length; j++){
       
-      $('.test').append(list);
+        for (i=0; i<stupids.length; i++){
+      
+            if (stupids[i]==list[j]){
+         
+                 delete stupids[i];
+            }
+        }
+      }
+      
+      $('.jqValue').append(stupids);
   });
-  
-
-
- 
   
   
 
