@@ -3,11 +3,7 @@ $(document).ready(function(){
   var $jqValue = $('.jqValue');
   var stupids = ['klaus', 'david', 'huy', 'george'];
   var list = [];
-  var choice;
-  var numForms = 0;
-  var $addChoice;
   var formNumber = 0;
-  var formID = ['choice1', 'choice2', 'choice3', 'choice4', 'choice5'];
   
     var form1 = "<form id = 'choice1'>Enter your name: <select><option>klaus</option><option>david</option><option>huy</option><option>george</option></select></form>";
     var form2 = "<form id = 'choice2'>Enter your name: <select><option>klaus</option><option>david</option><option>huy</option><option>george</option></select></form>";
@@ -22,7 +18,6 @@ $(document).ready(function(){
       
       
     $jqValue.append(forms[formNumber]);
-    numForms++;
     var element = document.getElementById("choice");
     formNumber++;
       
@@ -37,7 +32,7 @@ $(document).ready(function(){
       
       var array = [$form1, $form2, $form3, $form4, $form5];
       
-      for (i = 0; i < numForms; i++){
+      for (i = 0; i < formNumber; i++){
           
           var currentChoice = array[i].text();
           list.push(currentChoice);
@@ -49,7 +44,6 @@ $(document).ready(function(){
         for (i=0; i<stupids.length; i++){
       
             if (stupids[i]==list[j]){
-         
                  delete stupids[i];
             }
         }
