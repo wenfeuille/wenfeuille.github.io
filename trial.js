@@ -49,7 +49,7 @@ $(document).ready(function(){
         }
       }
       
-      $('.jqValue').append(stupids);
+      $('.jqValue').append(stupids + 'hello');
   });
   
   
