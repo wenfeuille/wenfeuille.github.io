@@ -5,7 +5,7 @@ $(document).ready(function(){
   var list = [];
   var formNumber = 0;
   
-    var form1 = "<form id = 'choice1'>Enter your name: <select><option>klaus</option><option>david</option><option>huy</option><option>george</option></select></form>", "<form id = 'choice1'>Enter your name: <select><option>klaus</option><option>david</option><option>huy</option><option>george</option></select></form>";
+    var form1 = "<form id = 'choice1'>Enter your name: <select><option>klaus</option><option>david</option><option>huy</option><option>george</option></select></form>";
     var form2 = "<form id = 'choice2'>Enter your name: <select><option>klaus</option><option>david</option><option>huy</option><option>george</option></select></form>";
     var form3 = "<form id = 'choice3'>Enter your name: <select><option>klaus</option><option>david</option><option>huy</option><option>george</option></select></form>";
     var form4 = "<form id = 'choice4'>Enter your name: <select><option>klaus</option><option>david</option><option>huy</option><option>george</option></select></form>";
