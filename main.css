@@ -1,20 +1,13 @@
-div {
-    height:100px;
-    width:100px;
-    border-radius:5px;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    font-family: Verdana, Arial, Sans-Serif;
-    margin-right:5px;
+.entry1 {
+  display: none;}
+
+.entry2 {
+	display: none;
 }
 
-#ready {
-    background-color:#008800;
-    color:#FFFFFF;
-}
+.entry3 {
+  display: none;}
 
-#notready {
-    background-color:#FF0000;
-    color:#FFFFFF;
+.entry4 {
+	display: none;
 }
