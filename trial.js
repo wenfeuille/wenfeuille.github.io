@@ -1,57 +1,56 @@
 $(document).ready(function(){
   
-  var $jqValue = $('.jqValue');
-  var stupids = ['klaus ', 'david ', 'huy ', 'george '];
-  var list = [];
+  
+  var forms = [$('.entry1'), $('.entry2'), $('.entry3'), $('.entry4')];
   var formNumber = 0;
-  
-    var form1 = "<form id = 'choice1'>Enter your name: <select><option>klaus</option><option>david</option><option>huy</option><option>george</option></select></form>";
-    var form2 = "<form id = 'choice2'>Enter your name: <select><option>klaus</option><option>david</option><option>huy</option><option>george</option></select></form>";
-    var form3 = "<form id = 'choice3'>Enter your name: <select><option>klaus</option><option>david</option><option>huy</option><option>george</option></select></form>";
-    var form4 = "<form id = 'choice4'>Enter your name: <select><option>klaus</option><option>david</option><option>huy</option><option>george</option></select></form>";
-    var form5 = "<form id = 'choice5'>Enter your name: <select><option>klaus</option><option>david</option><option>huy</option><option>george</option></select></form>";
-  
- var forms = [form1, form2, form3, form4, form5];
+  var names = ['klaus', 'george', 'huy', 'david'];
+  var selections = [];
+  var formattedname =[];
+  var hello = [];
 
-      
   $('#addName').click(function(){
       
       
-    $jqValue.append(forms[formNumber]);
-    var element = document.getElementById("choice");
+    $(forms[formNumber]).show();
     formNumber++;
       
   });
-  
+
   $('#add').click(function(){
-      var $form1 = $('#choice1 option:selected');
-      var $form2 = $('#choice2 option:selected');
-      var $form3 = $('#choice3 option:selected');
-      var $form4 = $('#choice4 option:selected');
-      var $form5 = $('#choice5 option:selected');
+
+
+    var selection1=$('#choice1 option:selected');
+    var selection2=$('#choice2 option:selected');
+    var selection3=$('#choice3 option:selected');
+    var selection4=$('#choice4 option:selected');
+    selected=[selection1, selection2, selection3, selection4];
       
-      var array = [$form1, $form2, $form3, $form4, $form5];
-      
-      for (i = 0; i < formNumber; i++){
-          
-          var currentChoice = array[i].text();
-          list.push(currentChoice + ' ');
-          
-      }
     
-      for (j=0; j<list.length; j++){
-      
-        for (i=0; i<stupids.length; i++){
-      
-            if (stupids[i]==list[j]){
-                 delete stupids[i];
-            }
-        }
+    for (i=0; i<formNumber; i++){
+      selections.push(selected[i]);
+    }
+
+    
+    for (j=0; j<selections.length; j++){
+      for (i=0; i<names.length; i++){  
+        if(selections[j].text()==names[i]){
+          names.splice(i,1);
+        } 
       }
-      
-      $('.jqValue').append(stupids);
-  });
-  
+    }
   
 
+    for (i=0; i<names.length; i++){
+      hello[i]=names[i].concat(' ');
+    }
+
+
+    $('.jqValue').append(hello);
+    var datevalue = document.getElementById("date1").value;
+    $('.jqValue').append(datevalue);
+
+
+  })
+  
+  
 });
