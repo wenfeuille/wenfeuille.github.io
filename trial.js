@@ -72,13 +72,22 @@ $(document).ready(function(){
   
     for (i=0; i<names.length; i++){
       if (names[i]=='1st Hep B'){
-        missingvacs.push('1st dose Hep B: within 24 hours of birth');
+        var nextdose = new Date(birthday.setDate(birthday.getDate()+2));
+        missingvacs.push('1st dose Hep B by ' + nextdose.toLocaleDateString());
+        birthday = new Date(birthdayvalue);
       }
       else if (names[i]=='2nd Hep B'){
-        missingvacs.push('2nd dose Hep B: 1-2 months after birth');
+        var nextdose1 = new Date(birthday.setMonth(birthday.getMonth()+1));
+        nextdose1 = new Date(birthday.setDate(birthday.getDate()+1));
+        var nextdose2 = new Date(birthday.setMonth(birthday.getMonth()+1));
+        missingvacs.push('2nd dose Hep B between ' + nextdose1.toLocaleDateString() + ' and ' + nextdose2.toLocaleDateString());
+        birthday = new Date(birthdayvalue);
       }
       else if (names[i]=='3rd Hep B'){
-        missingvacs.push('3rd dose Hep B: 6 months after birth');
+        var nextdose = new Date(birthday.setMonth(birthday.getMonth()+6));
+        nextdose = new Date(birthday.setDate(birthday.getDate()+1));
+        missingvacs.push('3rd dose Hep B after ' + nextdose.toLocaleDateString());
+        birthday = new Date(birthdayvalue);
       }
     }
 
