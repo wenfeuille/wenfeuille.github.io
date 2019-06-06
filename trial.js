@@ -71,22 +71,49 @@ $(document).ready(function(){
     var firstdose = new Date(hepBdates[0]);
   
     for (i=0; i<names.length; i++){
+      var nextdose1 = new Date(birthday.setDate(birthday.getDate()+2));
+      birthday = new Date(birthdayvalue);
+      var nextdose2a;
+      var nextdose2b;
+
+      if (hepBdates.length>0){
+        var date = new Date(hepBdates[0]);
+        nextdose2a = new Date(date.setDate(date.getDate()+29));
+        var date2 = new Date(nextdose2a);
+        nextdose2b = new Date(date2.setMonth(date2.getMonth()+1));
+      }
+      else {
+        nextdose2a = new Date(birthday.setDate(birthday.getDate()+30));
+        nextdose2b = new Date(birthday.setMonth(birthday.getMonth()+1));
+        birthday = new Date(birthdayvalue);
+      }
+
+      var nextdose3;
+      if (hepBdates.length>1){
+        var date = new Date(hepBdates[1]);
+        nextdose3 = new Date(date.setDate(date.getDate()+57));
+      }
+      else {
+        nextdose3 = new Date(birthday.setMonth(birthday.getMonth()+1));
+        nextdose3 = new Date(birthday.setDate(birthday.getDate()+86));
+      }
+      
+      var today = new Date();
+      
       if (names[i]=='1st Hep B'){
-        var nextdose = new Date(birthday.setDate(birthday.getDate()+2));
-        missingvacs.push('1st dose Hep B by ' + nextdose.toLocaleDateString());
+        missingvacs.push('1st dose Hep B by ' + nextdose1.toLocaleDateString());
         birthday = new Date(birthdayvalue);
       }
       else if (names[i]=='2nd Hep B'){
-        var nextdose1 = new Date(birthday.setMonth(birthday.getMonth()+1));
-        nextdose1 = new Date(birthday.setDate(birthday.getDate()+1));
-        var nextdose2 = new Date(birthday.setMonth(birthday.getMonth()+1));
-        missingvacs.push('2nd dose Hep B between ' + nextdose1.toLocaleDateString() + ' and ' + nextdose2.toLocaleDateString());
-        birthday = new Date(birthdayvalue);
+        if (nextdose2a.getTime()-today.getTime()<0){
+          missingvacs.push('2nd dose Hep B by ' + today.toLocaleDateString());
+        }
+        else {
+          missingvacs.push('2nd dose Hep B between ' + nextdose2a.toLocaleDateString() + ' and ' + nextdose2b.toLocaleDateString());
+        }
       }
       else if (names[i]=='3rd Hep B'){
-        var nextdose = new Date(birthday.setMonth(birthday.getMonth()+6));
-        nextdose = new Date(birthday.setDate(birthday.getDate()+1));
-        missingvacs.push('3rd dose Hep B after ' + nextdose.toLocaleDateString());
+        missingvacs.push('3rd dose Hep B after ' + nextdose3.toLocaleDateString());
         birthday = new Date(birthdayvalue);
       }
     }
