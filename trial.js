@@ -1,17 +1,19 @@
 $(document).ready(function(){
   
   
-  var forms = [$('.entry1'), $('.entry2'), $('.entry3'), $('.entry4')];
+  var forms = [$('.entry1'), $('.entry2'), $('.entry3'), $('.entry4'), $('.entry5'), $('.entry6'), $('.entry7'), $('.entry8')];
   var formNumber = 0;
   var names = ['1st Hep B', '2nd Hep B', '3rd Hep B'];
   var rotarixnames = ['1st Rotarix', '2nd Rotarix'];
+  var dtapnames = ['1st DTaP', '2nd DTaP', '3rd DTaP', '4th DTaP', '5th DTaP'];
   var selections = [];
   var formattedname =[];
   var hello = [];
+  var dtapdates = [];
   var hepBdates = [];
   var rotarixdates = [];
   var hepBcount=0;
-  var dates = ['date1', 'date2', 'date3', 'date4'];
+  var dates = ['date1', 'date2', 'date3', 'date4', 'date5', 'date6', 'date7', 'date8'];
   var trial;
   var missingvacs=[];
   var today = new Date();
@@ -34,7 +36,11 @@ $(document).ready(function(){
     var selection2=$('#choice2 option:selected');
     var selection3=$('#choice3 option:selected');
     var selection4=$('#choice4 option:selected');
-    selected=[selection1, selection2, selection3, selection4];
+    var selection5=$('#choice5 option:selected');
+    var selection6=$('#choice6 option:selected');
+    var selection7=$('#choice7 option:selected');
+    var selection8=$('#choice8 option:selected');
+    selected=[selection1, selection2, selection3, selection4, selection5, selection6, selection7, selection8];
       
     
     for (i=0; i<formNumber; i++){
@@ -48,7 +54,211 @@ $(document).ready(function(){
       else if(selections[i].text()=="Rotavirus (Rotarix/RV1)"){
         rotarixdates.push(document.getElementById(dates[i]).value);
       }
+      else if(selections[i].text()=="DTaP"){
+        dtapdates.push(document.getElementById(dates[i]).value);
+      }
     }
+
+
+    birthday = new Date(birthdayvalue);
+    var dtapdose1a = new Date(birthday.setMonth(birthday.getMonth()+2));
+    var dtapdose1b = new Date(dtapdose1a.setMonth(dtapdose1a.getMonth()+2));
+    birthday = new Date(birthdayvalue);
+    var dtapdose1a = new Date(birthday.setMonth(birthday.getMonth()+2));
+    var dtapentry1 = new Date(dtapdates[0]);
+    var dtapentry2 = new Date(dtapdates[1]);
+    var dtapdose2a4wks = new Date(dtapentry1.setDate(dtapentry1.getDate()+28));
+    birthday = new Date(birthdayvalue);
+    var dtapdose2a4mos = new Date(birthday.setMonth(birthday.getMonth()+4));
+    var dtapdose2a;
+    if(dtapdose2a4wks-dtapdose2a4mos>0){
+      dtapdose2a=dtapdose2a4wks;
+    }
+    else{
+      dtapdose2a=dtapdose2a4mos;
+    }
+    dtapentry1 = new Date(dtapdates[0]);
+    birthday = new Date(birthdayvalue);
+    var dtapdose2b = new Date(birthday.setMonth(birthday.getMonth()+6));
+    var dtapentry3 = new Date(dtapdates[2]);
+    var dtapdose3a28wks = new Date(dtapentry2.setDate(dtapentry2.getDate()+28));
+    dtapentry2 = new Date(dtapdates[1]);
+    birthday = new Date(birthdayvalue);
+    var dtapdose3a6mos = new Date(birthday.setMonth(birthday.getMonth()+6));
+    var dtapdose3a;
+    if (dtapdose3a28wks-dtapdose3a6mos>0){
+      dtapdose3a = dtapdose3a28wks;
+    }
+    else {
+      dtapdose3a = dtapdose3a6mos;
+    }
+    birthday = new Date(birthdayvalue);
+    var dtapdose3b = new Date(birthday.setMonth(birthday.getMonth()+9));
+    birthday = new Date(birthdayvalue);
+    var dtapdose4a = new Date(birthday.setMonth(birthday.getMonth()+15));
+    birthday = new Date(birthdayvalue);
+    var dtapdose4b = new Date(birthday.setMonth(birthday.getMonth()+19));
+    birthday = new Date(birthdayvalue);
+    var dtapentry4 = new Date(dtapdates[3]);
+    dtapdose5a = new Date(birthday.setFullYear(birthday.getFullYear()+5));
+    birthday = new Date(birthdayvalue);
+    dtapdose5b = new Date(birthday.setFullYear(birthday.getFullYear()+7));
+    dtapentry5 = new Date(dtapdates[4]);
+
+  for (i=0; i<dtapnames.length; i++){
+
+    if(dtapentry1-dtapdose1a<0){
+      missingvacs.push('1st DTaP dose administered too early. See physician.');
+      break;
+    }
+    else if(dtapentry1-dtapdose1a>0){
+      if(dtapentry1-dtapdose1b>0){
+        missingvacs.push('1st DTaP dose administered too late. See physician.');
+        break;
+      }
+      else{
+        if(dtapdates.length==1){
+          if(today-dtapdose2b>0){
+              missingvacs.push('Missed 2nd DTaP dose. See physician.');
+              break;  
+          }
+          else{
+            if(today-dtapdose1a>0){
+              missingvacs.push('2nd DTaP dose between 4 and 6 months old. (By ' + dtapdose2b.toLocaleDateString() + ').');
+            }
+            else{
+              missingvacs.push('2nd DTaP dose between 4 and 6 months old. (Between ' + dtapdose2a.toLocaleDateString() + ' and ' + dtapdose2b.toLocaleDateString() + ').');
+            }
+            missingvacs.push('3rd DTaP dose between 6 and 9 months old AND at least 4 weeks after 2nd DTaP dose.');
+            missingvacs.push('4th DTaP dose between 15 and 19 months old.');
+            missingvacs.push('5th DTaP dose between 5 and 7 years old.');
+            break;
+          }
+        }
+      }
+    }
+    else{
+      if(today-dtapdose1b>0){
+        missingvacs.push('Missed 1st DTaP dose. See physician.');
+        break;
+      }
+      else{
+        if(dtapdates.length==0){
+          if(today-dtapdose1a>0){
+            missingvacs.push('1st DTaP dose between 2 and 4 months old. (By ' + dtapdose1b.toLocaleDateString() + ').');
+          }
+          else{
+            missingvacs.push('1st DTaP dose between between 2 and 4 months old. (Between ' + dtapdose1a.toLocaleDateString() + ' and ' + dtapdose1b.toLocaleDateString() + ')');
+          }
+          missingvacs.push('2nd DTaP dose between 4 and 6 months old AND at least 4 weeks after 1st DTaP dose.');
+          missingvacs.push('3rd DTaP dose between 6 and 9 months old AND at least 4 weeks after 2nd DTaP dose.');
+          missingvacs.push('4th DTaP dose between 15 and 19 months old.');
+          missingvacs.push('5th DTaP dose between 5 and 7 years old.');
+          break;
+        }
+      }
+    }
+
+    if(dtapentry2-dtapdose2a<0){
+      missingvacs.push('2nd DTaP dose administered too early. See physician.');
+      break;
+    }
+    else{
+      if(dtapentry2-dtapdose2b>0){
+        missingvacs.push('2nd DTaP dose administered too late. See physician');
+        break;
+      }
+      else{
+        if(dtapdates.length==2){
+          if(today-dtapdose3b>0){
+            missingvacs.push('Missed 3rd DTaP dose. See physician.');
+            break;
+          }
+          else{
+            if(today-dtapdose3a>0){
+              missingvacs.push('3rd DTaP dose between 6 and 9 months old. (By ' + dtapdose3b.toLocaleDateString() + ').');
+            }
+            else{
+              missingvacs.push('3rd DTaP dose between 6 and 9 month old. (Between ' + dtapdose3a.toLocaleDateString() + ' and ' + dtapdose3b.toLocaleDateString() + ').');
+            }
+            missingvacs.push('4th DTaP dose between 15 and 19 months old.');
+            missingvacs.push('5th DTaP dose between 5 and 7 years old.');
+            break;
+          } 
+        }
+      }
+    }
+
+    if(dtapentry3-dtapdose3a<0){
+      missingvacs.push('3rd DTaP dose administered too early. See physician.');
+      break;
+    }
+    else{
+      if(dtapentry3-dtapdose3b>0){
+        missingvacs.push('3rd DTaP dose administered too late. See physician.');
+        break;
+      }
+      else{
+        if(dtapdates.length==3){
+          if(today-dtapdose4b>0){
+            missingvacs.push('Missed 4th DTaP dose. See physician.');
+            break;
+          }
+          else{
+            if(today-dtapdose4a>0){
+              missingvacs.push('4th DTaP dose between 15 and 19 months old. (By ' + dtapdose4b.toLocaleDateString() + ').');
+            }
+            else{
+              missingvacs.push('4th DTaP dose between 15 and 19 months old. (Between ' + dtapdose4a.toLocaleDateString() + ' and ' + dtapdose4b.toLocaleDateString() + ').');
+            }
+            missingvacs.push('5th DTaP dose between 5 and 7 years old.');
+            break;
+          }
+        }
+      }
+    }
+
+    if(dtapentry4-dtapdose4a<0){
+      missingvacs.push('4th DTaP dose administered too early. See physician.');
+      break;
+    }
+    else{
+      if(dtapentry4-dtapdose4b>0){
+        missingvacs.push('4th DTaP dose administered too late. See physician.');
+        break;
+      }
+      else{
+        if(dtapdates.length==4){
+          if(today-dtapdose5b>0){
+            missingvacs.push('Missed 5th DTaP dose. See physician.');
+            break;
+          }
+          else{
+            if(today-dtapdose5a>0){
+              missingvacs.push('5th DTaP dose between 5 and 7 years old. (By ' + dtapdose5b.toLocaleDateString() + ').');
+            }
+            else{
+              missingvacs.push('5th DTaP dose between 5 and 7 years old. (Between ' + dtapdose5a.toLocaleDateString() + ' and ' + dtapdose5b.toLocaleDateString() + ').');
+            }
+            break;
+          }
+        }
+      }
+    }
+
+    if(dtapentry5-dtapdose5a<0){
+      missingvacs.push('5th DTaP dose administered too early. See physician.');
+      break;
+    }
+    else{
+      if(dtapentry5-dtapdose5b>0){
+        missingvacs.push('5th DTaP dose administered too late. See physician.');
+        break;
+      }
+      else{
+      }
+    }
+  }
 
     if (hepBdates.length>0){
       var firstdose = new Date(hepBdates[0]);
@@ -170,23 +380,27 @@ $(document).ready(function(){
       }
     }
     else if (rotarixnames[0]=='2nd Rotarix' && today.getTime()-birthday.getTime()<24*7*24*60*60*1000){
-      if (today.getTime()-rotarixdose2a.getTime()>0){
-        missingvacs.push('2nd dose Rotarix by ' + rotarixdose2b.toLocaleDateString());
-        birthday = new Date(birthdayvalue);
+    var rotarixdate2 = new Date(rotarixdates[1]);
+      if (rotarixdate2.getTime()-birthday.getTime()<24*7*24*60*60*1000){
+        if (today.getTime()-rotarixdose2a.getTime()>0){
+          missingvacs.push('2nd dose Rotarix by ' + rotarixdose2b.toLocaleDateString());
+          birthday = new Date(birthdayvalue);
+        }
+        else {
+          missingvacs.push('2nd dose Rotarix between ' + rotarixdose2a.toLocaleDateString() + ' and ' + rotarixdose2b.toLocaleDateString());
+        }
       }
       else {
-        missingvacs.push('2nd dose Rotarix between ' + rotarixdose2a.toLocaleDateString() + ' and ' + rotarixdose2b.toLocaleDateString());
+        missingvacs.push('2nd dose Rotarix given too late. See physician.');
       }
     }
   
 
     for (i=0; i<missingvacs.length; i++){
-      $('.jqValue').append(missingvacs[i] + '<br/>');
+      $('.jqValue').append('<br/>' + missingvacs[i] + '<br/>');
     }
 
-    birthday = new Date(birthdayvalue);
-
-    /*$('.jqValue').append(rotarixdose1b.getTime())*/;
+    $('.jqValue').append(dtapdose5b);
 
 
 
