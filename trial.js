@@ -3,14 +3,14 @@ $(document).ready(function(){
   
   var forms = [$('.entry1'), $('.entry2'), $('.entry3'), $('.entry4'), $('.entry5'), $('.entry6'), $('.entry7'), $('.entry8')];
   var formNumber = 0;
-  var names = ['1st Hep B', '2nd Hep B', '3rd Hep B'];
+  var hepbnames = ['1st Hep B', '2nd Hep B', '3rd Hep B'];
   var rotarixnames = ['1st Rotarix', '2nd Rotarix'];
   var dtapnames = ['1st DTaP', '2nd DTaP', '3rd DTaP', '4th DTaP', '5th DTaP'];
   var selections = [];
   var formattedname =[];
   var hello = [];
   var dtapdates = [];
-  var hepBdates = [];
+  var hepbdates = [];
   var rotarixdates = [];
   var hepBcount=0;
   var dates = ['date1', 'date2', 'date3', 'date4', 'date5', 'date6', 'date7', 'date8'];
@@ -49,7 +49,7 @@ $(document).ready(function(){
 
     for (i=0; i<selections.length; i++){
       if(selections[i].text()=='Hep B'){
-        hepBdates.push(document.getElementById(dates[i]).value);
+        hepbdates.push(document.getElementById(dates[i]).value);
       }
       else if(selections[i].text()=="Rotavirus (Rotarix/RV1)"){
         rotarixdates.push(document.getElementById(dates[i]).value);
@@ -145,7 +145,7 @@ $(document).ready(function(){
       else{
         if(dtapdates.length==0){
           if(today-dtapdose1a>0){
-            missingvacs.push('1st DTaP dose between 2 and 4 months old. (By ' + dtapdose1b.toLocaleDateString() + ').');
+            missingvacs.push('1st DTaP dose by between 2 and 4 months old. (By ' + dtapdose1b.toLocaleDateString() + ').');
           }
           else{
             missingvacs.push('1st DTaP dose between between 2 and 4 months old. (Between ' + dtapdose1a.toLocaleDateString() + ' and ' + dtapdose1b.toLocaleDateString() + ')');
@@ -260,147 +260,178 @@ $(document).ready(function(){
     }
   }
 
-    if (hepBdates.length>0){
-      var firstdose = new Date(hepBdates[0]);
-      if(firstdose.getTime()-birthday.getTime()<24*60*60*1000+1){
-        var firsthepbindex=names.indexOf('1st Hep B');
-        names.splice(firsthepbindex,1);
-      }
+  birthday = new Date(birthdayvalue);
+  var hepbdose1a = new Date(birthday.setHours(birthday.getHours()+6));
+  var hepbdose1b = new Date(birthday.setDate(birthday.getDate()+1));
+  birthday = new Date(birthdayvalue);
+  var hepbentry1 = new Date(hepbdates[0]);
+  var hepbentry2 = new Date(hepbdates[1]);
+  var hepbentry3 = new Date(hepbdates[2]);
+  var hepbdose2a = new Date(birthday.setDate(birthday.getDate()+28));
+  birthday = new Date(birthdayvalue);
+  var hepbdose2b = new Date(birthday.setMonth(birthday.getMonth()+4));
+  birthday = new Date(birthdayvalue);
+  var hepbdose3a = new Date(birthday.setMonth(birthday.getMonth()+6));
+  birthday = new Date(birthdayvalue);
+  var hepbdose3b = new Date(birthday.setMonth(birthday.getMonth()+19));
+  birthday = new Date(birthdayvalue);
+
+  for(i=0; i<hepbnames.length; i++){
+    if(hepbdates.length==0){
+      missingvacs.push('1st HepB dose within 12 hours of birth (' + hepbdose1a.toLocaleDateString() + ').');
+      missingvacs.push('2nd HepB dose between 1 and 4 months old. (Between ' + hepbdose2a.toLocaleDateString() + ' and ' + hepbdose2b.toLocaleDateString() + ').');
+      missingvacs.push('3rd HepB dose between 6 and 19 months old. (Between ' + hepbdose3a.toLocaleDateString() + ' and ' + hepbdose3b.toLocaleDateString() + ').');
+      break;
     }
 
-    if (hepBdates.length>1){
-      var seconddose = new Date(hepBdates[1]);
-      if(seconddose.getTime()-birthday.getTime()<2*30*24*60*60*1000+1 && seconddose.getTime()-birthday.getTime()>30*24*60*60*1000-1){
-        var secondhepbindex=names.indexOf('2nd Hep B');
-        names.splice(secondhepbindex,1);
-      }
+    if(hepbentry1-hepbdose1b>0){
+      missingvacs.push('1st HepB dose administered too late. See physician.');
+      break;
     }
-
-    if (hepBdates.length>2){
-      var thirddose = new Date(hepBdates[2]);
-      if(thirddose.getTime()-birthday.getTime()>6*30*24*60*60*1000+1){
-        var thirdhepbindex=names.indexOf('3rd Hep B');
-        names.splice(thirdhepbindex,1);
-      }
-    }
-
-    if (rotarixdates.length>0){
-      var firstdose = new Date(rotarixdates[0]);
-      if(firstdose.getTime()-birthday.getTime()>6*7*24*60*60*1000 && firstdose.getTime()-birthday.getTime()<20*7*24*60*60*1000){
-        var firstrotarixindex=rotarixnames.indexOf('1st Rotarix');
-        rotarixnames.splice(firstrotarixindex,1);
-      }
-      else if(firstdose.getTime()-birthday.getTime()<6*7*24*60*60*1000){
-        var firstrotarixindex=rotarixnames.indexOf('1st Rotarix');
-        rotarixnames.splice(firstrotarixindex,1);
-        var secondrotarixindex=rotarixnames.indexOf('2nd Rotarix');
-        rotarixnames.splice(secondrotarixindex,1);
-        missingvacs.push('1st dose Rotarix administered too early. Speak to physician.');
-      }
-    }
-
-    if (rotarixdates.length>1){
-      var firstdose = new Date(rotarixdates[0]);
-      var seconddose = new Date(rotarixdates[1]);
-      if(seconddose.getTime()-firstdose.getTime()>4*7*24*60*60*1000 && seconddose.getTime()-birthday.getTime()<24*7*24*60*60*1000){
-        var secondrotarixindex=rotarixnames.indexOf('2nd Rotarix');
-        rotarixnames.splice(secondrotarixindex,1);
-      }
-    }
-
-    
-  
-    for (i=0; i<names.length; i++){
-      var nextdose1 = new Date(birthday.setDate(birthday.getDate()+2));
-      birthday = new Date(birthdayvalue);
-      var nextdose2a;
-      var nextdose2b;
-
-      if (hepBdates.length>0){
-        var date = new Date(hepBdates[0]);
-        nextdose2a = new Date(date.setDate(date.getDate()+29));
-        var date2 = new Date(nextdose2a);
-        nextdose2b = new Date(date2.setMonth(date2.getMonth()+1));
-      }
-      else {
-        nextdose2a = new Date(birthday.setDate(birthday.getDate()+30));
-        nextdose2b = new Date(birthday.setMonth(birthday.getMonth()+1));
-        birthday = new Date(birthdayvalue);
-      }
-
-      var nextdose3;
-      var nextdose3b;
-      if (hepBdates.length>1){
-        var date = new Date(hepBdates[1]);
-        nextdose3 = new Date(date.setDate(date.getDate()+57));
-      }
-      else {
-        nextdose3 = new Date(birthday.setMonth(birthday.getMonth()+1));
-        nextdose3 = new Date(birthday.setDate(birthday.getDate()+86));
-      }
-
-      birthday = new Date(birthdayvalue);
-      var nextdose3b = new Date(birthday.setMonth(birthday.getMonth()+18));
-      if (names[i]=='1st Hep B'){
-        missingvacs.push('1st dose Hep B by ' + nextdose1.toLocaleDateString());
-        birthday = new Date(birthdayvalue);
-      }
-      else if (names[i]=='2nd Hep B'){
-        if (nextdose2a.getTime()-today.getTime()<0){
-          missingvacs.push('2nd dose Hep B by ' + today.toLocaleDateString());
+    else{
+      if(hepbdates.length==1){
+        if(today-hepbdose2b>0){
+          missingvacs.push('Missed 2nd HepB dose. See physician.');
+          break;
         }
-        else {
-          missingvacs.push('2nd dose Hep B between ' + nextdose2a.toLocaleDateString() + ' and ' + nextdose2b.toLocaleDateString());
+        else{
+          if(today-hepbdose2a>0){
+            missingvacs.push('2nd HepB dose between 1 and  4 months old. (By ' + hepbdose2b.toLocaleDateString() + ').');
+          }
+          else{
+            missingvacs.push('2nd HepB dose between 1 and 4 months old. (Between ' + hepbdose2a.toLocaleDateString() + ' and ' + hepbdose2b.toLocaleDateString() + ').');
+          }
+          missingvacs.push('3rd HepB dose between 6 and 19 months old. (Between ' + hepbdose3a.toLocaleDateString() + ' and ' + hepbdose3b.toLocaleDateString() + ').');
+          break;
         }
       }
-      else if (names[i]=='3rd Hep B'){
-        missingvacs.push('3rd dose Hep B between ' + nextdose3.toLocaleDateString() + ' and ' + nextdose3b.toLocaleDateString());
-      }
     }
 
-
-
-    var rotarixdose1a = new Date(birthday.setDate(birthday.getDate()+43));
-    birthday = new Date(birthdayvalue);
-    var rotarixdose1b = new Date(birthday.setDate(birthday.getDate()+141))
-    birthday = new Date(birthdayvalue);
-    var seconddosea = new Date(rotarixdates[0]);
-    var rotarixdose2a = new Date(seconddosea.setDate(seconddosea.getDate()+29));
-    var rotarixdose2b = new Date(birthday.setDate(birthday.getDate()+24*7+1));
-    birthday = new Date(birthdayvalue);
-
-    if (rotarixnames[0]=='1st Rotarix' && today.getTime()-birthday.getTime()<20*7*24*60*60*1000){
-      if (today.getTime()-rotarixdose1a.getTime()>0){
-        missingvacs.push('1st dose Rotarix by ' + rotarixdose1b.toLocaleDateString());
-        missingvacs.push('2nd dose Rotarix 4 weeks after 1st dose Rotarix');
-      }
-      else {
-        missingvacs.push('1st dose Rotarix between ' + rotarixdose1a.toLocaleDateString() + ' and ' + rotarixdose1b.toLocaleDateString());
-        missingvacs.push('2nd dose Rotarix 4 weeks after 1st dose Rotarix')
-      }
+    if(hepbentry2-hepbdose2a<0){
+      missingvacs.push('2nd HepB dose administered too early. See physician.');
+      break;
     }
-    else if (rotarixnames[0]=='2nd Rotarix' && today.getTime()-birthday.getTime()<24*7*24*60*60*1000){
-    var rotarixdate2 = new Date(rotarixdates[1]);
-      if (rotarixdate2.getTime()-birthday.getTime()<24*7*24*60*60*1000){
-        if (today.getTime()-rotarixdose2a.getTime()>0){
-          missingvacs.push('2nd dose Rotarix by ' + rotarixdose2b.toLocaleDateString());
-          birthday = new Date(birthdayvalue);
-        }
-        else {
-          missingvacs.push('2nd dose Rotarix between ' + rotarixdose2a.toLocaleDateString() + ' and ' + rotarixdose2b.toLocaleDateString());
+    else{
+      if(hepbentry2-hepbdose2b>0){
+        missingvacs.push('2nd HepB dose administered too late. See physician.');
+        break;
+      }
+      else{
+        if(hepbdates.length==2){
+          if(today-hepbdose3b>0){
+            missingvacs.push('Missed 3rd HepB dose. See physician.');
+            break;
+          }
+          else{
+            if(today-hepbdose3a>0){
+              missingvacs.push('3rd HepB dose between 6 and 19 months. (By ' + hepbdose3b.toLocaleDateString() + ').');
+            }
+            else{
+              missingvacs.push('3rd HepB dose between 6 and 19 months. (Bewteen ' + hepbdose3a.toLocaleDateString() + ' and ' + hepbdose3b.toLocaleDateString() + ').');
+            }
+            break;
+          }
         }
       }
-      else {
-        missingvacs.push('2nd dose Rotarix given too late. See physician.');
+    }
+
+    if(hepbentry3-hepbdose3a<0){
+      missingvacs.push('3rd HepB dose administered too early. See physician.');
+      break;
+    }
+    else{
+      if(hepbentry3-hepbdose3b>0){
+        missingvacs.push('3rd HepB dose administered too late. See physician.');
+        break;
+      }
+      else{
+        break;
       }
     }
+
+  }
+
+  birthday = new Date(birthdayvalue);
+  var rotarixentry1 = new Date(rotarixdates[0]);
+  var rotarixentry2 = new Date(rotarixdates[1]);
+  var rotarixdose1a = new Date(birthday.setDate(birthday.getDate()+42));
+  birthday = new Date(birthdayvalue);
+  var rotarixdose1b = new Date(birthday.setDate(birthday.getDate()+140));
+  birthday = new Date(birthdayvalue);
+  var rotarixdose2a = new Date(rotarixentry1.setDate(rotarixentry1.getDate()+28));
+  rotarixentry1 = new Date(rotarixdates[0]);
+  var rotarixdose2b = new Date(birthday.setDate(birthday.getDate()+(24*7)));
+  birthday = new Date(birthdayvalue);
+
+  for(i=0; i<rotarixnames.length; i++){
+    if(rotarixdates.length==0){
+      if(today-rotarixdose1a>0){
+        missingvacs.push('1st Rotarix dose between 6 and 20 weeks. (By ' + rotarixdose1b.toLocaleDateString() + ').');  
+      }
+      else{
+        missingvacs.push('1st Rotarix dose between 6 and 20 weeks. (Between ' + rotarixdose1a.toLocaleDateString() + ' and ' + rotarixdose1b.toLocaleDateString() + ').');
+      }
+      missingvacs.push('2nd Rotarix dose 4 weeks after 1st Rotarix dose.');
+      break;
+    }
+
+    if(rotarixentry1-rotarixdose1a<0){
+      missingvacs.push('1st Rotarix dose administered too early. See physician.');
+      break;
+    }
+    else{
+      if(rotarixentry1-rotarixdose1b>0){
+        missingvacs.push('1st Rotarix dose administered too late. See physician.');
+        break;
+      }
+      else{
+        if(rotarixdates.length==1){
+          if(today-rotarixdose2b>0){
+            missingvacs.push('Missed 2nd Rotarix dose. See physician.');
+            break;
+          }
+          else{
+            if(today-rotarixdose2a>0){
+              missingvacs.push('2nd Rotarix dose 4 weeks after 1st Rotarix dose AND by 24 weeks old. (By ' + rotarixdose2b.toLocaleDateString() + ').');
+            }
+            else{
+              missingvacs.push('2nd Rotarix dose 4 weeks after 1st Rotarix dose AND by 24 weeks old. (Between ' + rotarixdose2a.toLocaleDateString() + ' and ' + rotarixdose2b.toLocaleDateString() + ').');
+            }
+            break;
+          }
+        }
+      }
+    }
+
+    if(rotarixentry2-rotarixdose2a<0){
+      missingvacs.push('2nd Rotarix dose administered too early. See physician.');
+      break;
+    }
+    else{
+      if(rotarixentry2-rotarixdose2b>0){
+        missingvacs.push('2nd Rotarix dose administered too late. See physician.');
+        break;
+      }
+      else{
+        if(today-rotarixdose2b>0){
+          missingvacs.push('Missed 2nd Rotarix dose. See physician.');
+          break;
+        }
+        else{
+          missingvacs.push('2nd Rotarix right.');
+          break;
+        }
+      }
+    }
+
+  }
   
 
     for (i=0; i<missingvacs.length; i++){
       $('.jqValue').append('<br/>' + missingvacs[i] + '<br/>');
     }
 
-    $('.jqValue').append(dtapdose5b);
+    /*$('.jqValue').append(dtapdose5b);*/
 
 
 
