@@ -1,9 +1,31 @@
 $(document).ready(function(){
+
   
   
   var forms = [$('.entry1'), $('.entry2'), $('.entry3'), $('.entry4'), $('.entry5'), $('.entry6'), $('.entry7'), $('.entry8')];
+  var lines = [$('.line1'), $('.line2'), $('.line3'), $('.line4'), $('.line5'), $('.line6'), $('.line7'), $('.line8'), $('.line9'), $('.line10'), 
+  $('.line11'), $('.line12'), $('.line13'), $('.line14'), $('.line15'), $('.line16'), $('.line17'), $('.line18'), $('.line19'), $('.line20')];
   var formNumber = 0;
-  var dosenumber = 0;
+  var dosenumber1 = 0;
+  var dosenumber2 = 0;
+  var dosenumber3 = 0;
+  var dosenumber4 = 0;
+  var dosenumber5 = 0;
+  var dosenumber6 = 0;
+  var dosenumber7 = 0;
+  var dosenumber8 = 0;
+  var dosenumber9 = 0;
+  var dosenumber10 = 0;
+  var dosenumber11 = 0;
+  var dosenumber12 = 0;
+  var dosenumber13 = 0;
+  var dosenumber14 = 0;
+  var dosenumber15 = 0;
+  var dosenumber16 = 0;
+  var dosenumber17 = 0;
+  var dosenumber18 = 0;
+  var dosenumber19 = 0;
+  var dosenumber20 = 0;
   var selections = [];
   var dtapdates = [];
   var hepbdates = [];
@@ -14,6 +36,7 @@ $(document).ready(function(){
   var pcvdates = [];
   var poliodates = [];
   var mmrdates = [];
+  var varicelladates = [];
   var dates = ['date1', 'date2', 'date3', 'date4', 'date5', 'date6', 'date7', 'date8'];
   var missingvacs=[];
   var nextvacs=[];
@@ -62,113 +85,93 @@ $(document).ready(function(){
   var vaccines = [vaccine1, vaccine2];
 
   $('#addName').click(function(){
-      
-      
+
     $(forms[formNumber]).show();
+    lines[formNumber].css('display', 'inline-block');
     formNumber++;
       
   });
 
   $('#adddose1').click(function(){
-    $(dosedates1[dosenumber]).show();
-    dosenumber++;
+    $(dosedates1[dosenumber1]).show();
+    dosenumber1++;
   });
-  dosenumber=0;
   $('#adddose2').click(function(){
-    $(dosedates2[dosenumber]).show();
-    dosenumber++;
+    $(dosedates2[dosenumber2]).show();
+    dosenumber2++;
   });
-  dosenumber=0;
   $('#adddose3').click(function(){
-    $(dosedates3[dosenumber]).show();
-    dosenumber++;
+    $(dosedates3[dosenumber3]).show();
+    dosenumber3++;
   });
-  dosenumber=0;
   $('#adddose4').click(function(){
-    $(dosedates4[dosenumber]).show();
-    dosenumber++;
+    $(dosedates4[dosenumber4]).show();
+    dosenumber4++;
   });
-  dosenumber=0;
   $('#adddose5').click(function(){
-    $(dosedates5[dosenumber]).show();
-    dosenumber++;
+    $(dosedates5[dosenumber5]).show();
+    dosenumber5++;
   });
-  dosenumber=0;
   $('#adddose6').click(function(){
-    $(dosedates6[dosenumber]).show();
-    dosenumber++;
+    $(dosedates6[dosenumber6]).show();
+    dosenumber6++;
   });
-  dosenumber=0;
   $('#adddose7').click(function(){
-    $(dosedates7[dosenumber]).show();
-    dosenumber++;
+    $(dosedates7[dosenumber7]).show();
+    dosenumber7++;
   });
-  dosenumber=0;
   $('#adddose8').click(function(){
-    $(dosedates8[dosenumber]).show();
-    dosenumber++;
+    $(dosedates8[dosenumber8]).show();
+    dosenumber8++;
   });
-  dosenumber=0;
   $('#adddose9').click(function(){
-    $(dosedates9[dosenumber]).show();
-    dosenumber++;
+    $(dosedates9[dosenumber9]).show();
+    dosenumber9++;
   });
-  dosenumber=0;
   $('#adddose10').click(function(){
-    $(dosedates10[dosenumber]).show();
-    dosenumber++;
+    $(dosedates10[dosenumber10]).show();
+    dosenumber10++;
   });
-  dosenumber=0;
   $('#adddose11').click(function(){
-    $(dosedates11[dosenumber]).show();
-    dosenumber++;
+    $(dosedates11[dosenumber11]).show();
+    dosenumber11++;
   });
-  dosenumber=0;
   $('#adddose12').click(function(){
-    $(dosedates12[dosenumber]).show();
-    dosenumber++;
+    $(dosedates12[dosenumber12]).show();
+    dosenumber12++;
   });
-  dosenumber=0;
   $('#adddose13').click(function(){
-    $(dosedates13[dosenumber]).show();
-    dosenumber++;
+    $(dosedates13[dosenumber13]).show();
+    dosenumber13++;
   });
-  dosenumber=0;
   $('#adddose14').click(function(){
-    $(dosedates14[dosenumber]).show();
-    dosenumber++;
+    $(dosedates14[dosenumber14]).show();
+    dosenumber14++;
   });
-  dosenumber=0;
   $('#adddose15').click(function(){
-    $(dosedates15[dosenumber]).show();
-    dosenumber++;
+    $(dosedates15[dosenumber15]).show();
+    dosenumber15++;
   });
-  dosenumber=0;
   $('#adddose16').click(function(){
-    $(dosedates16[dosenumber]).show();
-    dosenumber++;
+    $(dosedates16[dosenumber16]).show();
+    dosenumber16++;
   });
-  dosenumber=0;
   $('#adddose17').click(function(){
-    $(dosedates17[dosenumber]).show();
-    dosenumber++;
+    $(dosedates17[dosenumber17]).show();
+    dosenumber17++;
   });
-  dosenumber=0;
   $('#adddose18').click(function(){
-    $(dosedates18[dosenumber]).show();
-    dosenumber++;
+    $(dosedates18[dosenumber18]).show();
+    dosenumber18++;
   });
-  dosenumber=0;
   $('#adddose19').click(function(){
-    $(dosedates19[dosenumber]).show();
-    dosenumber++;
+    $(dosedates19[dosenumber19]).show();
+    dosenumber19++;
   });
-  dosenumber=0;
   $('#adddose20').click(function(){
-    $(dosedates20[dosenumber]).show();
-    dosenumber++;
+    $(dosedates20[dosenumber20]).show();
+    dosenumber20++;
   });
-  dosenumber=0;
 
 
   $('#add').click(function(){
@@ -200,6 +203,8 @@ $(document).ready(function(){
     var months7 = new Date(birthday.setMonth(birthday.getMonth()+7));
     birthday = new Date(birthdayvalue);
     var years4 = new Date(birthday.setFullYear(birthday.getFullYear()+4));
+    birthday = new Date(birthdayvalue);
+    var months19 = new Date(birthday.setDate(birthday.getDate()+19));
     birthday = new Date(birthdayvalue);
 
 
@@ -291,6 +296,14 @@ $(document).ready(function(){
           }
         }
       }
+      else if(selections[i].text()=='Varicella'){
+        varicelladates.push(document.getElementById(dates[i]).value);
+        for(j=0; j<vaccines[0].length; j++){
+          if (document.getElementById(vaccines[i][j]).value!==''){
+            varicelladates.push(document.getElementById(vaccines[i][j]).value);
+          }
+        }
+      }
     }
 
     birthday = new Date(birthdayvalue);
@@ -333,15 +346,23 @@ $(document).ready(function(){
     var dtapdose4b = new Date(birthday.setMonth(birthday.getMonth()+19));
     birthday = new Date(birthdayvalue);
     var dtapentry4 = new Date(dtapdates[3]);
-    var dtapdose5a = new Date(birthday.setFullYear(birthday.getFullYear()+5));
+    var dtapdose5a = new Date(birthday.setFullYear(birthday.getFullYear()+4));
     birthday = new Date(birthdayvalue);
-    var dtapdose5b = new Date(birthday.setFullYear(birthday.getFullYear()+8));
+    var dtapdose5b = new Date(birthday.setFullYear(birthday.getFullYear()+7));
     dtapentry5 = new Date(dtapdates[4]);
     birthday = new Date(birthdayvalue);
     var dtapentry36mos = new Date(dtapentry3.setMonth(dtapentry3.getMonth()+6));
     dtapentry3 = new Date(dtapdates[2]);
     var dtapentry46mos = new Date(dtapentry4.setMonth(dtapentry4.getMonth()+6));
     dtapentry4 = new Date(dtapdates[3]);
+    var dtapentry14wks = new Date(dtapentry1.setDate(dtapentry1.getDate()+28));
+    dtapentry1 = new Date(dtapdates[0]);
+    var dtapentry18wks = new Date(dtapentry1.setDate(dtapentry1.getDate()+56));
+    dtapentry1 = new Date(dtapdates[0]);
+    var dtapentry24wks = new Date(dtapentry2.setDate(dtapentry2.getDate()+28));
+    dtapentry2 = new Date(dtapdates[1]);
+    var dtapentry28wks = new Date(dtapentry2.setDate(dtapentry2.getDate()+56));
+    dtapentry2 = new Date(dtapdates[1]);
     var loop = 0;
 
     do{
@@ -350,22 +371,37 @@ $(document).ready(function(){
       if(dtapdates.length==0){
         if(today>dtapdose1b){
           if(today>months4 && today<year4){
-            firstdose.push('Missed 1st DTaP dose. Catch up schedule:');
+            firstdose.push('1st DTaP dose overdue. Catch up schedule:');
             nextdose.push('1st DTaP dose today.');
             nextdose.push('2nd DTaP dose 4 to 8 weeks after 1st DTaP dose.');
             nextdose.push('3rd DTaP dose 4 to 8 weeks after 2nd DTaP dose.');
-            nextdose.push('4th DTaP dose 6 to 10 months after 3rd DTaP dose.');
-            nextdose.push('5th DTaP dose between 4 and 6 years old.');
-            $('.dtap').append('</br>' + firstdose + '</br>');
-            $('.dtapbutton').append('+');
-            for(i=0; i<4; i++){
+            nextdose.push('4th DTaP dose 6 months after 3rd DTaP dose.');
+            nextdose.push('5th DTaP dose (final dose) between 4 and 6 years old.');
+            $('.dtap').append('</br>' + firstdose + ' ');
+            $('.dtapbutton').append('+ </br>');
+            for(i=0; i<nextdose.length; i++){
               $('.dtap2').append('</br>' + nextdose[i] + '</br>');
             }
             break;
           }
-          firstdose.push('Missed 1st DTaP dose. See physician.');
-          $('.dtap').append('</br>' + firstdose + '</br>');
-          break;
+          else if(today>year4 && today<year7){
+            firstdose.push('1st DTaP dose overdue. Catch up schedule:');
+            nextdose.push('1st DTaP dose today.');
+            nextdose.push('2nd DTaP dose 4 to 8 weeks after dose 1.');
+            nextdose.push('3rd DTaP dose 4 to 8 weeks after dose 2.');
+            nextdose.push('4th DTaP (final dose) dose 6 months after dose 3.');
+            $('.dtap').append('</br>' + firstdose + ' ');
+            $('.dtapbutton').append('+ </br>');
+            for(i=0; i<nextdose.length; i++){
+              $('.dtap2').append('</br>' + nextdose[i] + '</br>');
+            }
+            break;
+          }
+          else{
+            firstdose.push('1st DTaP dose overdue. See physician.');
+            $('.dtap').append('</br>' + firstdose + '</br>');
+            break;
+          }
         }
         else{
           if(today>dtapdose1a){
@@ -377,9 +413,9 @@ $(document).ready(function(){
           nextdose.push('2nd DTaP dose between 4 and 6 months old AND at least 4 weeks after 1st DTaP dose.');
           nextdose.push('3rd DTaP dose between 6 and 9 months old AND at least 4 weeks after 2nd DTaP dose.');
           nextdose.push('4th DTaP dose between 15 and 19 months old.');
-          nextdose.push('5th DTaP dose between 5 and 7 years old.');
-          $('.dtap').append('</br>' + firstdose + '</br>');
-          $('.dtapbutton').append('+');
+          nextdose.push('5th DTaP dose (final dose) between 4 and 6 years old.');
+          $('.dtap').append('</br>' + firstdose + ' ');
+          $('.dtapbutton').append('+ <br/>');
           for(i=0; i<4; i++){
             $('.dtap2').append('<br/>' + nextdose[i] + '<br/>');            
           }
@@ -394,9 +430,71 @@ $(document).ready(function(){
       }
       else{
         if(dtapentry1>dtapdose1b){
-          firstdose.push('1st DTaP dose administered too late. See physician.');
-          $('.dtap').append('</br>' + firstdose + '</br>');
-          break;
+          if(dtapdates.length==1){
+            if(today>months4 && today<year1){
+              firstdose.push('1st DTaP dose administered too late. Catch up schedule:');
+              if(today>dtapentry14wks){
+                nextdose.push('2nd DTaP dose today.');
+              }
+              else{
+                nextdose.push('2nd DTaP dose 4 to 8 weeks after dose 1. (Between ' + dtapentry14wks.toLocaleDateString() + ' and ' + dtapentry18wks.toLocaleDateString() + ').');
+              }
+              nextdose.push('3rd DTaP dose 4 to 8 weeks after dose 2.');
+              nextdose.push('4th DTAP dose 6 months after dose 3 AND after 15 months old.');
+              nextdose.push('5th DTaP dose (final dose) between 4 and 6 years old.');
+              $('.dtap').append('</br>' + firstdose + ' ');
+              $('.dtapbutton').append('+ <br/>');
+              for(i=0; i<4; i++){
+                $('.dtap2').append('<br/>' + nextdose[i] + '<br/>');            
+              }
+              break;
+            }
+            else if(today>year1 && today<year4){
+              firstdose.push('1st DTaP dose administered too late. Catch up schedule:');
+              if(today>dtapentry14wks){
+                nextdose.push('2nd DTaP dose today.');
+              }
+              else{
+                nextdose.push('2nd DTaP dose 4 to 8 weeks after dose 1. (Between ' + dtapentry14wks.toLocaleDateString() + ' and ' + dtapentry18wks.toLocaleDateString() + ').');
+              }
+              nextdose.push('3rd DTaP dose 4 to 8 weeks after dose 2.');
+              nextdose.push('4th DTaP dose 6 months after dose 3.');
+              nextdose.push('5th DTaP dose (final dose) 6 months after dose 4 AND between 4 and 6 years old.');
+              $('.dtap').append('</br>' + firstdose + ' ');
+              $('.dtapbutton').append('+ <br/>');
+              for(i=0; i<4; i++){
+                $('.dtap2').append('<br/>' + nextdose[i] + '<br/>');            
+              }
+              break;
+            }
+            else if(today>year4 && today<year7){
+              firstdose.push('1st DTaP dose administered too late. Catch up schedule:');
+              if(today>dtapentry14wks){
+                nextdose.push('2nd DTaP dose today.');
+              }
+              else{
+                nextdose.push('2nd DTaP dose 4 to 8 weeks after dose 1. (Bewteen ' + dtapentry14wks.toLocaleDateString() + ' and ' + dtapentry18wks.toLocaleDateString() + ').'); 
+              }
+              nextdose.push('3rd DTaP dose 4 to 8 weeks after dose 2.');
+              nextdose.push('4th DTaP dose (final dose) 6 months after dose 3.');
+              $('.dtap').append('</br>' + firstdose + ' ');
+              $('.dtapbutton').append('+ <br/>');
+              for(i=0; i<4; i++){
+                $('.dtap2').append('<br/>' + nextdose[i] + '<br/>');            
+              }
+              break;
+            }
+            else{
+              firstdose.push('1st DTaP dose administered too late. See physician.');
+              $('.dtap').append('</br>' + firstdose + '</br>');
+              break;              
+            }
+          }
+          else{
+            firstdose.push('1st DTaP dose administered too late. See physician.');
+            $('.dtap').append('</br>' + firstdose + '</br>');
+            break;
+          }
         }
         else{
           if(dtapdates.length==1){
@@ -406,25 +504,42 @@ $(document).ready(function(){
               var dtapentry18wks = new Date(dtapentry1.setDate(dtapentry1.getDate()+56));
               dtapentry1 = new Date(dtapdates[0]); 
               if(today>months4 && today<year4){
-                firstdose.push('Missed 2nd DTaP dose. Catch up schedule: '); 
+                firstdose.push('2nd DTaP dose overdue. Catch up schedule: '); 
                 if(today>dtapentry14wks){
                   nextdose.push('2nd DTaP dose today.');
                 }
                 else{
-                  nextdose.push('2nd DTaP dose 4 to 8 weeks after 1st DTaP dose. (Between ' + dtapentry14wks.toLocaleDateString() + ' and ' + dtapentry18wks.toLocaleDateString() + ').');
+                  nextdose.push('2nd DTaP dose 4 to 8 weeks after dose 1. (Between ' + dtapentry14wks.toLocaleDateString() + ' and ' + dtapentry18wks.toLocaleDateString() + ').');
                 }
-                nextdose.push('3rd DTaP dose 4 to 8 weeks after 2nd DTaP dose.');
-                nextdose.push('4th DTaP dose 6 to 10 monhts after 3rd DTaP dose.');
-                nextdose.push('5th DTaP dose between 4 and 6 years old.');
-                $('.dtap').append('</br>' + firstdose + '</br>');
-                $('.dtapbutton').append('+');
-                for(i=0; i<3; i++){
+                nextdose.push('3rd DTaP dose 4 to 8 weeks after dose 2.');
+                nextdose.push('4th DTaP dose 6 months after dose 3.');
+                nextdose.push('5th DTaP dose (final dose) between 4 and 6 years old.');
+                $('.dtap').append('</br>' + firstdose + ' ');
+                $('.dtapbutton').append('+ </br>');
+                for(i=0; i<nextdose.length; i++){
+                  $('.dtap2').append('</br>' + nextdose[i] + '</br>');
+                }
+                break;
+              }
+              else if (today>year4 && today<year7){
+                firstdose.push('2nd DTaP dose overdue. Catch up schedule:');
+                if(today>dtapentry1){
+                  nextdose.push('2nd DTaP dose today.');
+                }
+                else{
+                  nextdose.push('2nd DTaP dose 4 to 8 weeks after dose 1.');
+                }
+                nextdose.push('3rd DTaP dose 4 to 8 weeks after dose 2.');
+                nextdose.push('4th DTaP dose (final dose) 6 months after dose 3.');
+                $('.dtap').append('</br>' + firstdose + ' ');
+                $('.dtapbutton').append('+ </br>');
+                for(i=0; i<nextdose.length; i++){
                   $('.dtap2').append('</br>' + nextdose[i] + '</br>');
                 }
                 break;
               }
               else{
-                firstdose.push('Missed 2nd DTaP dose. See physician.');
+                firstdose.push('2nd DTaP dose overdue. See physician.');
                 $('.dtap').append('</br>' + firstdose + '</br>');  
                 break;          
               } 
@@ -438,7 +553,7 @@ $(document).ready(function(){
               }
               nextdose.push('3rd DTaP dose between 6 and 9 months old AND at least 4 weeks after 2nd DTaP dose.');
               nextdose.push('4th DTaP dose between 15 and 19 months old.');
-              nextdose.push('5th DTaP dose between 5 and 7 years old.');
+              nextdose.push('5th DTaP dose (final dose) between 5 and 7 years old.');
               $('.dtap').append('</br>' + firstdose + '</br>');
               $('.dtapbutton').append('+');
               for(i=0; i<3; i++){
@@ -457,9 +572,68 @@ $(document).ready(function(){
       }
       else{
         if(dtapentry2>dtapdose2b){
-          firstdose.push('2nd DTaP dose administered too late. See physician');
-          $('.dtap').append('</br>' + firstdose + '</br>');
-          break;
+          if(dtapdates.length==2){
+            if(today>months4 && today<year1){
+              firstdose.push('2nd DTaP dose administered too late. Catch up schedule:');
+              if(today>dtapentry24wks){
+                nextdose.push('3rd DTaP dose today.');
+              }
+              else{
+                nextdose.push('3rd DTaP dose 4 to 8 weeks after dose 2. (Between ' + dtapentry24wks.toLocaleDateString() + ' and ' + dtapentry28wks.toLocaleDateString() + ').');
+              }
+              nextdose.push('4th DTaP dose 6 months after dose 3 AND after 15 months old.');
+              nextdose.push('5th DTaP (final dose) between 4 and 6 years old.');
+              $('.dtap').append('</br>' + firstdose + ' ');
+              $('.dtapbutton').append('+ </br>');
+              for(i=0; i<nextdose.length; i++){
+                $('.dtap2').append('</br>' + nextdose[i] + '</br>');
+              }
+              break;
+            }
+            else if(today>year1 && today<year4){
+              firstdose.push('2nd DTaP dose administered too late. Catch up schedule:');
+              if(today>dtapentry24wks){
+                nextdose.push('3rd DTaP dose today.');
+              }
+              else{
+                nextdose.push('3rd DTaP dose 4 to 8 weeks after dose 2. (Between ' + dtapentry24wks.toLocaleDateString() + ' and ' + dtapentry28wks.toLocaleDateString() + ').');
+              }
+              nextdose.push('4th DTaP dose 6 months after dose 3 AND after 15 months old.');
+              nextdose.push('5th DTaP (final dose) between 4 and 6 years old.');
+              $('.dtap').append('</br>' + firstdose + ' ');
+              $('.dtapbutton').append('+ </br>');
+              for(i=0; i<nextdose.length; i++){
+                $('.dtap2').append('</br>' + nextdose[i] + '</br>');
+              }
+              break;
+            }
+            else if(today>year4 && today<year7){
+              firstdose.push('2nd DTaP dose administered too late. Catch up schedule:');
+              if(today>dtapentry24wks){
+                nextdose.push('3rd DTaP dose today.');
+              }
+              else{
+                nextdose.push('3rd DTaP dose 4 to 8 weeks after dose 2. (Bewteen ' + dtapentry24wks.toLocaleDateString() + ' and ' + dtapentry28wks.toLocaleDateString() + ').');
+              }
+              nextdose.push('4th DTaP dose (final dose) 6 months after dose 3.');
+              $('.dtap').append('</br>' + firstdose + ' ');
+              $('.dtapbutton').append('+ </br>');
+              for(i=0; i<nextdose.length; i++){
+                $('.dtap2').append('</br>' + nextdose[i] + '</br>');
+              }
+              break;
+            }
+            else{
+              firstdose.push('2nd DTaP dose administered too late. See physician');
+              $('.dtap').append('</br>' + firstdose + '</br>');
+              break;              
+            }
+          }
+          else{
+            firstdose.push('2nd DTaP dose administered too late. See physician');
+            $('.dtap').append('</br>' + firstdose + '</br>');
+            break;
+          }
         }
         else{
           if(dtapdates.length==2){
@@ -469,7 +643,7 @@ $(document).ready(function(){
               var dtapentry28wks = new Date(dtapentry2.setDate(dtapentry2.getDate()+56));
               dtapentry2 = new Date(dtapdates[1]);
               if(today>months4 && today<months12){
-                firstdose.push('Missed 3rd DTaP dose. Catch up schedule:');
+                firstdose.push('3rd DTaP dose overdue. Catch up schedule:');
                 if(today>dtapentry24wks){
                   nextdose.push('3rd DTaP dose today.');
                 }
@@ -477,16 +651,16 @@ $(document).ready(function(){
                   nextdose.push('3rd DTaP dose 4 to 8 weeks after 2nd DTaP dose. (Between ' + dtapentry24wks.toLocaleDateString() + ' and ' + dtapentry28wks.toLocaleDateString() + ').');
                 }
                 nextdose.push('4th DTaP dose at least 6 months after 3rd DTaP dose AND at least 15 months old.');
-                nextdose.push('5th DTaP dose between 5 and 7 years old.');
-                $('.dtap').append('</br>' + firstdose + '</br>');
-                $('.dtapbutton').append('+');
-                for(i=0; i<3; i++){
+                nextdose.push('5th DTaP dose (final dose) between 5 and 7 years old.');
+                $('.dtap').append('</br>' + firstdose + ' ');
+                $('.dtapbutton').append('+ </br>');
+                for(i=0; i<nextdose.length; i++){
                   $('.dtap2').append('</br>' + nextdose[i] + '</br>');
                 }
                 break;
               }
               else if(today>year1 && today<year4){
-                firstdose.push('Missed 3rd DTaP dose. Catch up schedule:');
+                firstdose.push('3rd DTaP dose overdue. Catch up schedule:');
                 if(today>dtapentry24wks){
                   nextdose.push('3rd DTaP dose today.');
                 }
@@ -494,16 +668,32 @@ $(document).ready(function(){
                   nextdose.push('3rd DTaP dose 4 to 8 weeks after 2nd DTaP dose. (Bewteen ' + dtapentry24wks.toLocaleDateString() + ' and ' + dtapentry28wks.toLocaleDateString() + ').');
                 }
                 nextdose.push('4th DTaP dose at least 6 months after 3rd DTaP dose.');
-                nextdose.push('5th DTaP dose between 5 and 7 years old.');
-                $('.dtap').append('</br>' + firstdose + '</br>');
-                $('.dtapbutton').append('+');
-                for(i=0; i<3; i++){
+                nextdose.push('5th DTaP dose (final dose) between 5 and 7 years old.');
+                $('.dtap').append('</br>' + firstdose + ' ');
+                $('.dtapbutton').append('+ </br>');
+                for(i=0; i<nextdose.length; i++){
+                  $('.dtap2').append('</br>' + nextdose[i] + '</br>');
+                }
+                break;
+              }
+              else if(today>year4 && today<year7){
+                firstdose.push('3rd DTaP dose overdue. Catch up schedule:');
+                if(today>dtapentry24wks){
+                  nextdose.push('3rd DTaP dose today.');
+                }
+                else{
+                  nextdose.push('3rd DTaP dose 4 to 8 weeks after dose 2. (Between ' + dtapentry24wks.toLocaleDateString() + ' and ' + dtapentry28wks.toLocaleDateString() + ').');
+                }
+                nextdose.push('4th DTaP dose (final dose) 6 months after dose 3.');
+                $('.dtap').append('</br>' + firstdose + ' ');
+                $('.dtapbutton').append('+ </br>');
+                for(i=0; i<nextdose.length; i++){
                   $('.dtap2').append('</br>' + nextdose[i] + '</br>');
                 }
                 break;
               }
               else{
-                firstdose.push('Missed 3rd DTaP dose. See physician.');
+                firstdose.push('3rd DTaP dose overdue. See physician.');
                 $('.dtap').append('</br>' + firstdose + '</br>');
                 break;
               }
@@ -516,10 +706,10 @@ $(document).ready(function(){
                 firstdose.push('3rd DTaP dose between 6 and 9 month old. (Between ' + dtapdose3a.toLocaleDateString() + ' and ' + dtapdose3b.toLocaleDateString() + ').');
               }
               nextdose.push('4th DTaP dose between 15 and 19 months old.');
-              nextdose.push('5th DTaP dose between 5 and 7 years old.');
-              $('.dtap').append('</br>' + firstdose + '</br>');
-              $('.dtapbutton').append('+');
-              for(i=0; i<2; i++){
+              nextdose.push('5th DTaP dose (final dose) between 5 and 7 years old.');
+              $('.dtap').append('</br>' + firstdose + ' ');
+              $('.dtapbutton').append('+ </br>');
+              for(i=0; i<nextdose.length; i++){
                 $('.dtap2').append('</br>' + nextdose[i] + '</br>');
               }
               break;
@@ -535,26 +725,72 @@ $(document).ready(function(){
       }
       else{
         if(dtapentry3-dtapdose3b>0){
-          firstdose.push('3rd DTaP dose administered too late. See physician.');
-          $('.dtap').append('</br>' + firstdose + '</br>');
-          break;
+          if(dtapdates.length==3){
+            if(today>year1 && today<year4){
+              firstdose.push('3rd DTaP dose administered too late. Catch up schedule:');
+              if(today>dtapentry36mos){
+                if(today>months12 && today<months15){
+                  nextdose.push('4th DTaP dose between 15 and 18 months old. (Between ' + months15.toLocaleDateString() + ' and ' + months19.toLocaleDateString() + ').');
+                }
+                else{
+                  nextdose.push('4th DTaP dose today.');
+                }
+                nextdose.push('5th DTaP dose (final dose) 6 months after dose 4 AND between 4 and 6 years old.');
+              }
+              else{
+                nextdose.push('4th DTaP dose 6 months after dose 3. (After ' + dtapentry36mos.toLocaleDateString() + ').');
+                nextdose.push('5th DTaP dose (final dose) 6 months after dose 4 AND between 4 and 6 years old.');
+              }
+              $('.dtap').append('</br>' + firstdose + ' ');
+              $('.dtapbutton').append('+ </br>');
+              for(i=0; i<nextdose.length; i++){
+                $('.dtap2').append('</br>' + nextdose[i] + '</br>');
+              }
+              break;
+            }
+            else if(today>year4 && today<year7){
+              firstdose.push('3rd DTaP dose administered too late. Catch up schedule:.....');
+              if(today>dtapentry36mos){
+                nextdose.push('4th DTaP dose (final dose) today.');
+              }
+              else{
+                nextdose.push('4th DTaP dose (final dose) 6 months after dose 3. (After ' + dtapentry36mos.toLocaleDateString() + ').');
+              }
+              $('.dtap').append('</br>' + firstdose + ' ');
+              $('.dtapbutton').append('+ </br>');
+              for(i=0; i<nextdose.length; i++){
+                $('.dtap2').append('</br>' + nextdose[i] + '</br>');
+              }
+              break;
+            }
+            else{
+              firstdose.push('3rd DTaP dose administered too late. See physician.');
+              $('.dtap').append('</br>' + firstdose + '</br>');
+              break;              
+            }
+          }
+          else{
+            firstdose.push('3rd DTaP dose administered too late. See physician.');
+            $('.dtap').append('</br>' + firstdose + '</br>');
+            break;
+          }
         }
         else{
           if(dtapdates.length==3){
             if(today-dtapdose4b>0){
               if(today>year1 && today<year4){
-                firstdose.push('Missed 4th DTaP dose. Catch up schedule:');
+                firstdose.push('4th DTaP dose overdue. Catch up schedule:');
                 if(today>dtapentry36mos){
                   if(today>months12 && today<months15){
                     nextdose.push('4th DTaP dose between 15 and 18 months old. (Between ' + dtapdose4a.toLocaleDateString() + ' and ' + dtapdose4b.toLocaleDateString() + ').');
-                    nextdose.push('5th DTaP dose at least 6 months after 4th DTaP dose AND between 5 and 7 years old.');   
+                    nextdose.push('5th DTaP dose (final dose) at least 6 months after 4th DTaP dose AND between 4 and 6 years old.');   
                   }
                   else{
                     nextdose.push('4th DTaP dose today.');
-                    nextdose.push('5th DTaP dose at least 6 months after 4th DTaP dose AND between 5 and 7 years old.');
-                    $('.dtap').append('</br>' + firstdose + '</br>');
-                    $('.dtapbutton').append('+');
-                    for(i=0; i<2; i++){
+                    nextdose.push('5th DTaP dose (final dose) at least 6 months after 4th DTaP dose AND between 4 and 6 years old.');
+                    $('.dtap').append('</br>' + firstdose + ' ');
+                    $('.dtapbutton').append('+ </br>');
+                    for(i=0; i<nextdose.length; i++){
                       $('.dtap2').append('</br>' + nextdose[i] + '</br>');
                     }
                     break;   
@@ -562,17 +798,32 @@ $(document).ready(function(){
                 }
                 else{
                   firstdose.push('4th DTaP dose at least 6 months after dose 3.');
-                  nextdose.push('5th DTaP dose at least 6 months after 4th DTaP dose AND between 5 and 7 years old.');
-                  $('.dtap').append('</br>' + firstdose + '</br>');
-                  $('.dtapbutton').append('+');
+                  nextdose.push('5th DTaP dose at least 6 months after 4th DTaP dose AND between 4 and 6 years old.');
+                  $('.dtap').append('</br>' + firstdose + ' ');
+                  $('.dtapbutton').append('+ </br>');
                   for(i=0; i<nextdose.length; i++){
                     $('.dtap2').append('</br>' + nextdose[i] + '</br>');
                   }
                   break;  
                 }
               }
+              else if(today>year4 && today<year7){
+                firstdose.push('4th DTaP dose overdue. Catch up schedule:');
+                if(today>dtapentry36mos){
+                  nextdose.push('4th DTaP dose (final dose) today.');
+                }
+                else{
+                  nextdose.push('4th DTaP dose (final dose) 6 months after dose 3. (After' + dtapentry36mos.toLocaleDateString() + ').');
+                }
+                $('.dtap').append('</br>' + firstdose + ' ');
+                $('.dtapbutton').append('+ </br>');
+                for(i=0; i<nextdose.length; i++){
+                  $('.dtap2').append('</br>' + nextdose[i] + '</br>');
+                }
+                break;  
+              }
               else{
-                firstdose.push('Missed 4th DTaP dose. See physician.');
+                firstdose.push('4th DTaP dose overdue. See physician.');
                 $('.dtap').append('</br>' + firstdose + '</br>');
                 break;
               }
@@ -584,9 +835,9 @@ $(document).ready(function(){
               else{
                 firstdose.push('4th DTaP dose between 15 and 19 months old. (Between ' + dtapdose4a.toLocaleDateString() + ' and ' + dtapdose4b.toLocaleDateString() + ').');
               }
-              nextdose.push('5th DTaP dose between 5 and 7 years old.');
-              $('.dtap').append('</br>' + firstdose + '</br>');
-              $('.dtapbutton').append('+');
+              nextdose.push('5th DTaP dose (final dose) between 5 and 7 years old.');
+              $('.dtap').append('</br>' + firstdose + ' ');
+              $('.dtapbutton').append('+ </br>');
               for(i=0; i<nextdose.length; i++){
                 $('.dtap2').append('</br>' + nextdose[i] + '</br>')
               } 
@@ -603,42 +854,42 @@ $(document).ready(function(){
       }
       else{
         if(dtapentry4>dtapdose4b){
-          firstdose.push('4th DTaP dose administered too late. See physician.');
-          $('.dtap').append('</br>' + firstdose + '</br>');
-          break;
+          if(dtapdates.length==4){
+            if(today>year4 && today<year7){
+              if(dtapentry4<year4){
+                firstdose.push('4th DTaP dose administered too late. Catch up schedule:');
+                if(today<dtapentry46mos){
+                  nextdose.push('5th DTaP dose (final dose) 6 months after dose 4 (After ' + dtapentry46mos.toLocaleDateString() + ').');
+                }
+                else{
+                  nextdose.push('5th DTaP dose (final dose) today.');
+                }
+                $('.dtap').append('</br>' + firstdose + ' ');
+                $('.dtapbutton').append('+ </br>');
+                for(i=0; i<nextdose.length; i++){
+                  $('.dtap2').append('</br>' + nextdose[i] + '</br>')
+                } 
+                break; 
+              }
+            }
+            else{
+              firstdose.push('4th DTaP dose administered too late. See physician.');
+              $('.dtap').append('</br>' + firstdose + '</br>');
+              break;              
+            }
+          }
+          else{
+            firstdose.push('4th DTaP dose administered too late. See physician.');
+            $('.dtap').append('</br>' + firstdose + '</br>');
+            break;
+          }
         }
         else{
           if(dtapdates.length==4){
             if(today>dtapdose5b){
-                if(today>year1 && today<year4){
-                firstdose.push('Missed 5th DTaP dose. Catch up schedule:');
-                if(dtapentry4<year4){
-                  if(today>dtapentry46mos){
-                    nextdose.push('5th DTaP dose today.');
-                  }
-                  else{
-                    nextdose.push('5th DTaP dose at least 6 months after 4th DTaP dose. (After ' + dtapentry46mos.toLocaleDateString() + ').');
-                    $('.dtap').append('</br>' + firstdose + '</br>');
-                    $('.dtapbutton').append('+');
-                    for(i=0; i<nextdose.length; i++){
-                      $('.dtap2').append('</br>' + nextdose[i] + '</br>');
-                    }
-                    break;  
-                  }
-                }
-                nextdose.push('TDap between 11 and 12 years old.');
-                $('.dtap').append('</br>' + firstdose + '</br>');
-                $('.dtapbutton').append('+');
-                for(i=0; i<nextdose.length; i++){
-                  $('.dtap2').append('</br>' + nextdose[i] + '</br>');
-                }
-                break; 
-              }
-              else{
-                firstdose.push('Missed 5th DTaP dose. See physician.');
-                $('.dtap').append('</br>' + firstdose + '</br>');
-                break;
-              }
+              firstdose.push('5th DTaP dose overdue. See physician.');
+              $('.dtap').append('</br>' + firstdose + '</br>');
+              break;
             }
             else{
               if(today>dtapdose5a){
@@ -700,18 +951,18 @@ $(document).ready(function(){
       if(hepbdates.length==0){
         if(today>hepbdose1b){
           if(today>year11 && today<year16){
-            firstdose.push('Missed 1st Hep B. Catch up schedule: ');
+            firstdose.push('1st Hep B dose overdue. Catch up schedule: ');
             nextdose.push('1st dose Recombivax HB today.');
-            nextdose.push('2nd dose Recombivax HB 4 to 6 months after 1st Recombivax HB dose.');
-            $('.hepb').append('</br>' + firstdose + '</br>');
-            $('.hepbbutton').append('+');
+            nextdose.push('2nd dose (final dose) Recombivax HB 4 to 6 months after 1st Recombivax HB dose.');
+            $('.hepb').append('</br>' + firstdose + ' ');
+            $('.hepbbutton').append('+ </br>');
             for(i=0; i<nextdose.length; i++){
               $('.hepb2').append('</br>' + nextdose[i] + '</br>')
             }
             break;  
           }
           else{
-            firstdose.push('Missed 1st HepB dose. See physician.');
+            firstdose.push('1st HepB dose overdue. See physician.');
             $('.hepb').append('</br>' + firstdose + '</br>');
             break;
           }
@@ -719,13 +970,13 @@ $(document).ready(function(){
         else{
           firstdose.push('1st HepB dose within 12 hours of birth (' + hepbdose1a.toLocaleDateString() + ').');
           nextdose.push('2nd HepB dose between 1 and 4 months old. (Between ' + hepbdose2a.toLocaleDateString() + ' and ' + hepbdose2b.toLocaleDateString() + ').');
-          nextdose.push('3rd HepB dose between 6 and 19 months old. (Between ' + hepbdose3a.toLocaleDateString() + ' and ' + hepbdose3b.toLocaleDateString() + ').');
-          $('.hepb').append('</br>' + firstdose + '</br>');
-          $('.hepbbutton').append('+');
+          nextdose.push('3rd HepB dose (final dose) between 6 and 19 months old. (Between ' + hepbdose3a.toLocaleDateString() + ' and ' + hepbdose3b.toLocaleDateString() + ').');
+          $('.hepb').append('</br>' + firstdose + ' ');
+          $('.hepbbutton').append('+ </br>');
           for(i=0; i<nextdose.length; i++){
-            $('.hepb2').append('</br>' + nextdose[i] + '</br>');
-          } 
-          break;
+            $('.hepb2').append('</br>' + nextdose[i] + '</br>')
+          }
+          break;  
         }
       }
 
@@ -737,7 +988,7 @@ $(document).ready(function(){
       else{
         if(hepbdates.length==1){
           if(today>hepbdose2b){
-            firstdose.push('Missed 2nd HepB dose. See physician.');
+            firstdose.push('2nd HepB dose overdue. See physician.');
             $('.hepb').append('</br>' + firstdose + '</br>');
             break;
           }
@@ -748,13 +999,13 @@ $(document).ready(function(){
             else{
               firstdose.push('2nd HepB dose between 1 and 4 months old. (Between ' + hepbdose2a.toLocaleDateString() + ' and ' + hepbdose2b.toLocaleDateString() + ').');
             }
-            nextdose.push('3rd HepB dose between 6 and 19 months old. (Between ' + hepbdose3a.toLocaleDateString() + ' and ' + hepbdose3b.toLocaleDateString() + ').');
-            $('.hepb').append('</br>' + firstdose + '</br>');
-            $('.hepbbutton').append('+');
+            nextdose.push('3rd HepB dose (final dose) between 6 and 19 months old. (Between ' + hepbdose3a.toLocaleDateString() + ' and ' + hepbdose3b.toLocaleDateString() + ').');
+            $('.hepb').append('</br>' + firstdose + ' ');
+            $('.hepbbutton').append('+ </br>');
             for(i=0; i<nextdose.length; i++){
-              $('.hepb2').append('</br>' + nextdose[i] + '</br>');
+              $('.hepb2').append('</br>' + nextdose[i] + '</br>')
             }
-            break; 
+            break;  
           }
         }
       }
@@ -773,16 +1024,16 @@ $(document).ready(function(){
         else{
           if(hepbdates.length==2){
             if(today>hepbdose3b){
-              firstdose.push('Missed 3rd HepB dose. See physician.');
+              firstdose.push('3rd HepB dose overdue. See physician.');
               $('.hepb').append('</br>' + firstdose + '</br>');
               break;
             }
             else{
               if(today>hepbdose3a){
-                firstdose.push('3rd HepB dose between 6 and 19 months. (By ' + hepbdose3b.toLocaleDateString() + ').');
+                firstdose.push('3rd HepB dose (final dose) between 6 and 19 months. (By ' + hepbdose3b.toLocaleDateString() + ').');
               }
               else{
-                firstdose.push('3rd HepB dose between 6 and 19 months. (Bewteen ' + hepbdose3a.toLocaleDateString() + ' and ' + hepbdose3b.toLocaleDateString() + ').');
+                firstdose.push('3rd HepB dose (final dose) between 6 and 19 months. (Bewteen ' + hepbdose3a.toLocaleDateString() + ' and ' + hepbdose3b.toLocaleDateString() + ').');
               }
               $('.hepb').append('</br>' + firstdose + '</br>');
               break;
@@ -799,12 +1050,12 @@ $(document).ready(function(){
       else{
         if(hepbentry3>hepbdose3b){
           firstdose.push('3rd HepB dose administered too late. See physician.');
-          $('.hepb').append('</br>' + firstdose + '</br>');
-          $('.hepbbutton').append('+');
+          $('.hepb').append('</br>' + firstdose + ' ');
+          $('.hepbbutton').append('+ </br>');
           for(i=0; i<nextdose.length; i++){
-            $('.hepb2').append('</br>' + nextdose[i] + '</br>');
+            $('.hepb2').append('</br>' + nextdose[i] + '</br>')
           }
-          break; 
+          break;  
         }
         else{
         }
@@ -881,53 +1132,53 @@ $(document).ready(function(){
         if(hibdates.length==0){
           if(today>hibdose1b){
             if(today>months4 && today<months7){
-              firstdose.push('Missed 1st HiB dose. Catch up schedule:');
+              firstdose.push('1st HiB dose overdue. Catch up schedule:');
               nextdose.push('1st HiB dose today.');
               nextdose.push('2nd HiB dose 4 to 8 weeks after dose 1.');
               nextdose.push('3rd HiB dose 4 to 8 weeks after dose 2.');
               nextdose.push('4th Hib dose (final dose) bewteen 12 and 18 months old. (Between ' + hibdose4a.toLocaleDateString() + ' and ' + hibdose4b.toLocaleDateString() + ').');
-              $('.hib').append('</br>' + firstdose + '</br>');
-              $('.hibbutton').append('+');
+              $('.hib').append('</br>' + firstdose + ' ');
+              $('.hibbutton').append('+ </br>');
               for(i=0; i<nextdose.length; i++){
                 $('.hib2').append('</br>' + nextdose[i] + '</br>');
               }
               break; 
             }
             else if(today>months7 && today<months12){
-              firstdose.push('Missed 1st HiB dose. Catch up schedule:');
+              firstdose.push('1st HiB dose overdue. Catch up schedule:');
               nextdose.push('1st HiB dose today.');
               nextdose.push('2nd HiB dose 4 to 8 weeks after dose 1.');
               nextdose.push('3rd HiB dose (final dose) 8 to 12 weeks after dose 2.');
-              $('.hib').append('</br>' + firstdose + '</br>');
-              $('.hibbutton').append('+');
+              $('.hib').append('</br>' + firstdose + ' ');
+              $('.hibbutton').append('+ </br>');
               for(i=0; i<nextdose.length; i++){
                 $('.hib2').append('</br>' + nextdose[i] + '</br>');
               }
-              break; 
+              break;  
             }
             else if(today>months12 && today<months15){
-              firstdose.push('Missed 1st HiB dose. Catch up schedule:');
+              firstdose.push('1st HiB dose overdue. Catch up schedule:');
               nextdose.push('1st HiB dose today.');
               nextdose.push('2nd HiB dose (final dose) 4 to 8 weeks after dose 1.');
-              $('.hib').append('</br>' + firstdose + '</br>');
-              $('.hibbutton').append('+');
+              $('.hib').append('</br>' + firstdose + ' ');
+              $('.hibbutton').append('+ </br>');
+              for(i=0; i<nextdose.length; i++){
+                $('.hib2').append('</br>' + nextdose[i] + '</br>');
+              }
+              break;  
+            }
+            else if(today>months15 && today<months60){
+              firstdose.push('1st HiB dose overdue. Catch up schedule:');
+              nextdose.push('1st HiB dose (final dose) today.');
+              $('.hib').append('</br>' + firstdose + ' ');
+              $('.hibbutton').append('+ </br>');
               for(i=0; i<nextdose.length; i++){
                 $('.hib2').append('</br>' + nextdose[i] + '</br>');
               }
               break; 
             }
-            else if(today>months15 && today<months60){
-              firstdose.push('Missed 1st HiB dose. Catch up schedule:');
-              nextdose.push('1st HiB dose (final dose) today.');
-              $('.hib').append('</br>' + firstdose + '</br>');
-              $('.hibbutton').append('+');
-              for(i=0; i<nextdose.length; i++){
-                $('.hib2').append('</br>' + nextdose[i] + '</br>');
-              } 
-              break;
-            }
             else{
-              firstdose.push('Missed 1st HiB dose. See physician.');
+              firstdose.push('1st HiB dose overdue. See physician.');
               $('.hib').append('</br>' + firstdose + '</br>');
               break;
             }
@@ -942,12 +1193,13 @@ $(document).ready(function(){
             }
             nextdose.push('2nd HiB dose between 4 and 6 months old AND 4 weeks after 1st HiB dose.');
             nextdose.push('3rd HiB dose between 6 and 9 months old AND 4 weeks after 2nd HiB dose.');
-            nextdose.push('4th HiB dose between 12 and 18 months old. (Between ' + hibdose4a.toLocaleDateString() + ' and ' + hibdose4b.toLocaleDateString() + ').');
-            $('.hib').append('</br>' + firstdose + '</br>');
-            $('.hibbutton').append('+');
+            nextdose.push('4th HiB dose (final dose) between 12 and 18 months old. (Between ' + hibdose4a.toLocaleDateString() + ' and ' + hibdose4b.toLocaleDateString() + ').');
+            $('.hib').append('</br>' + firstdose + ' ');
+            $('.hibbutton').append('+ </br>');
             for(i=0; i<nextdose.length; i++){
               $('.hib2').append('</br>' + nextdose[i] + '</br>');
-            } 
+            }
+            break; 
           }
         }
 
@@ -967,9 +1219,9 @@ $(document).ready(function(){
                 nextdose.push('2nd HiB dose 4 to 8 weeks after dose 1. (Between ' + hibentry14wks.toLocaleDateString() + ' and ' + hibentry18wks.toLocaleDateString() + ').');
               }
               nextdose.push('3rd HiB dose 4 to 8 weeks after dose 2.');
-              nextdose.push('4th HiB dose between 12 and 18 months old. (Between ' + hibdose4a.toLocaleDateString() + ' and ' + hibdose4b.toLocaleDateString() + ').');
-              $('.hib').append('</br>' + firstdose + '</br>');
-              $('.hibbutton').append('+');
+              nextdose.push('4th HiB dose (final dose) between 12 and 18 months old. (Between ' + hibdose4a.toLocaleDateString() + ' and ' + hibdose4b.toLocaleDateString() + ').');
+              $('.hib').append('</br>' + firstdose + ' ');
+              $('.hibbutton').append('+ </br>');
               for(i=0; i<nextdose.length; i++){
                 $('.hib2').append('</br>' + nextdose[i] + '</br>');
               }
@@ -981,7 +1233,7 @@ $(document).ready(function(){
                 if(today>hibentry14wks){
                   nextdose.push('2nd HiB dose today.');
                   if(hibentry1>months7){
-                    nextdose.push('3rd HiB dose 3 weeks after dose 2.');
+                    nextdose.push('3rd HiB dose (final dose) 3 weeks after dose 2.');
                   }
                   else{
                     nextdose.push('3rd HiB dose (final dose) 8 to 12 weeks after dose 2 AND after 12 months old.');
@@ -991,8 +1243,8 @@ $(document).ready(function(){
                   nextdose.push('2nd HiB dose 4 to 8 weeks after dose 1. (Between ' + hibentry14wks.toLocaleDateString() + ' and ' + hibentry18wks.toLocaleDateString() + ').');
                   nextdose.push('3rd HiB dose (final dose) 8 to 12 weeks after dose 2 AND after 12 months old.');
                 }
-                $('.hib').append('</br>' + firstdose + '</br>');
-                $('.hibbutton').append('+');
+                $('.hib').append('</br>' + firstdose + ' ');
+                $('.hibbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.hib2').append('</br>' + nextdose[i] + '</br>');
                 }
@@ -1003,18 +1255,18 @@ $(document).ready(function(){
                 if(hibentry1<months7){
                   if(today>hibentry24wks){
                     nextdose.push('3rd HiB dose today.');
-                    nextdose.push('4th HiB dose 8 to 12 weeks after dose 3 AND after 12 months old.');
+                    nextdose.push('4th HiB dose (final dose) 8 to 12 weeks after dose 3 AND after 12 months old.');
                   }
                   else{
                     nextdose.push('3rd HiB dose 4 to 8 weeks after dose 2.');
-                    nextdose.push('4th HiB dose 8 to 12 weeks after dose 3 AND after 12 months old.');
+                    nextdose.push('4th HiB dose (final dose) 8 to 12 weeks after dose 3 AND after 12 months old.');
                   }
                 }
                 else{
                   nextdose.push('3rd HiB dose (final dose) 8 to 12 weeks after dose 2 AND after 12 months old.');
                 }
-                $('.hib').append('</br>' + firstdose + '</br>');
-                $('.hibbutton').append('+');
+                $('.hib').append('</br>' + firstdose + ' ');
+                $('.hibbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.hib2').append('</br>' + nextdose[i] + '</br>');
                 }
@@ -1031,7 +1283,7 @@ $(document).ready(function(){
                   }
                   else{
                     nextdose.push('2nd HiB dose 4 to 8 weeks after dose 1. (Between ' + hibentry14wks.toLocaleDateString() + ' and ' + hibentry18wks.toLocaleDateString() + ').');
-                    nextdose.push('3rd HiB dose 8 to 12 weeks after dose 2.');
+                    nextdose.push('3rd HiB dose (final dose) 8 to 12 weeks after dose 2.');
                   }
                 }
                 else{
@@ -1056,11 +1308,12 @@ $(document).ready(function(){
                 else{
                 }
               }
-              $('.hib').append('</br>' + firstdose + '</br>');
-              $('.hibbutton').append('+');
+              $('.hib').append('</br>' + firstdose + ' ');
+              $('.hibbutton').append('+ </br>');
               for(i=0; i<nextdose.length; i++){
                 $('.hib2').append('</br>' + nextdose[i] + '</br>');
-              } 
+              }
+              break; 
             }
             else if(today>months15 && today<months60){
               if(hibdates.length==1){
@@ -1077,8 +1330,8 @@ $(document).ready(function(){
                     nextdose.push('2nd HiB dose (final dose) 8 to 12 weeks after dose 1. (Between ' + hibentry18wks.toLocaleDateString() + ' and ' + hibentry112wks.toLocaleDateString() + ').');
                   }
                 }
-                $('.hib').append('</br>' + firstdose + '</br>');
-                $('.hibbutton').append('+');
+                $('.hib').append('</br>' + firstdose + ' ');
+                $('.hibbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.hib2').append('</br>' + nextdose[i] + '</br>');
                 }
@@ -1094,7 +1347,7 @@ $(document).ready(function(){
             if(hibdates.length==1){
               if(today>hibdose2b){
                 if(today>months4 && today<months7){
-                  firstdose.push('Missed 2nd HiB dose. Catch up schedule:');
+                  firstdose.push('2nd HiB dose overdue. Catch up schedule:');
                   if(today>hibentry14wks){
                     nextdose.push('2nd HiB dose today.');
                   }
@@ -1102,16 +1355,16 @@ $(document).ready(function(){
                     nextdose.push('2nd HiB dose 4 to 8 weeks after dose 1. (Between ' + hibentry14wks.toLocaleDateString() + ' and ' + hibentry18wks.toLocaleDateString() + ').');
                   }
                   nextdose.push('3rd HiB dose 4 to 8 weeks after dose 2.');
-                  nextdose.push('4th HiB dose between 12 and 18 months old. (Between ' + hibdose4a.toLocaleDateString() + ' and ' + hibdose4b.toLocaleDateString() + ').');
-                  $('.hib').append('</br>' + firstdose + '</br>');
-                  $('.hibbutton').append('+');
+                  nextdose.push('4th HiB dose (final dose) between 12 and 18 months old. (Between ' + hibdose4a.toLocaleDateString() + ' and ' + hibdose4b.toLocaleDateString() + ').');
+                  $('.hib').append('</br>' + firstdose + ' ');
+                  $('.hibbutton').append('+ </br>');
                   for(i=0; i<nextdose.length; i++){
                     $('.hib2').append('</br>' + nextdose[i] + '</br>');
                   }
                   break; 
                 }
                 else if(today>months7 && today<months12){
-                  firstdose.push('Missed 2nd HiB dose. Catch up schedule:');
+                  firstdose.push('2nd HiB dose overdue. Catch up schedule:');
                   if(today>hibentry14wks){
                     nextdose.push('2nd HiB dose today.');
                     if(hibentry1<months7){
@@ -1126,15 +1379,15 @@ $(document).ready(function(){
                     nextdose.push('2nd HiB dose 4 to 8 weeks after dose 1. (Between ' + hibentry14wks.toLocaleDateString() + ' and ' + hibentry18wks.toLocaleDateString() + ').');
                     nextdose.push('3rd HiB dose (final dose) 8 to 12 weeks after dose 2 AND after 12 months old.');
                   }
-                  $('.hib').append('</br>' + firstdose + '</br>');
-                  $('.hibbutton').append('+');
+                  $('.hib').append('</br>' + firstdose + ' ');
+                  $('.hibbutton').append('+ </br>');
                   for(i=0; i<nextdose.length; i++){
                     $('.hib2').append('</br>' + nextdose[i] + '</br>');
                   }
                   break; 
                 }
                 else if (today>months12 && today<months15){
-                  firstdose.push('Missed 2nd HiB dose. Catch up schedule:');
+                  firstdose.push('2nd HiB dose overdue. Catch up schedule:');
                   if(hibentry1<months12){
                     if(today>hibentry14wks){
                       nextdose.push('2nd HiB dose today.');
@@ -1153,8 +1406,8 @@ $(document).ready(function(){
                       nextdose.push('2nd HiB dose (final dose) 8 to 12 weeks after dose 1. (Between ' + hibentry28wks.toLocaleDateString() + ' and ' + hibentry212wks.toLocaleDateString() + ').');
                     }
                   }
-                  $('.hib').append('</br>' + firstdose + '</br>');
-                  $('.hibbutton').append('+');
+                  $('.hib').append('</br>' + firstdose + ' ');
+                  $('.hibbutton').append('+ </br>');
                   for(i=0; i<nextdose.length; i++){
                     $('.hib2').append('</br>' + nextdose[i] + '</br>');
                   }
@@ -1162,11 +1415,11 @@ $(document).ready(function(){
                 }
                 else if(today>months15 && today<months60){
                   if(hibentry1<months12){
-                  firstdose.push('Missed 2nd HiB dose. Catch up schedule:');
+                  firstdose.push('2nd HiB dose overdue. Catch up schedule:');
                     nextdose.push('2nd HiB dose (final dose) today.');
                   }
                   else if(hibentry1>months12 && hibentry1<months15){
-                  firstdose.push('Missed 2nd HiB dose. Catch up schedule:');
+                  firstdose.push('2nd HiB dose overdue. Catch up schedule:');
                     if(today>hibentry18wks){
                       nextdose.push('2nd HiB dose (final dose) today.');
                     }
@@ -1174,15 +1427,15 @@ $(document).ready(function(){
                       nextdose.push('2nd HiB dose (final dose) 8 to 12 weeks after dose 1. (Between ' + hibentry18wks.toLocaleDateString() + ' and ' + hibentry112wks.toLocaleDateString() + ').');
                     }
                   }
-                  $('.hib').append('</br>' + firstdose + '</br>');
-                  $('.hibbutton').append('+');
+                  $('.hib').append('</br>' + firstdose + ' ');
+                  $('.hibbutton').append('+ </br>');
                   for(i=0; i<nextdose.length; i++){
                     $('.hib2').append('</br>' + nextdose[i] + '</br>');
                   }
                   break; 
                 }
                 else{
-                  firstdose.push('Missed 2nd HiB dose. See physician.');
+                  firstdose.push('2nd HiB dose overdue. See physician.');
                   $('.hib').append('</br>' + firstdose + '</br>');
                   break;
                 }
@@ -1195,13 +1448,13 @@ $(document).ready(function(){
                   firstdose.push('2nd HiB dose between 4 and 6 months old. (Between ' + hibdose2a.toLocaleDateString() + ' and ' + hibdose2b.toLocaleDateString() + ').');  
                 }
                 nextdose.push('3rd HiB dose between 6 and 9 months old AND 4 weeks after 2nd HiB dose.');
-                nextdose.push('4th HiB dose between 12 and 18 months old. (Between ' + hibdose4a.toLocaleDateString() + ' and ' + hibdose4b.toLocaleDateString() + ').');
-                $('.hib').append('</br>' + firstdose + '</br>');
-                $('.hibbutton').append('+');
+                nextdose.push('4th HiB dose (final dose) between 12 and 18 months old. (Between ' + hibdose4a.toLocaleDateString() + ' and ' + hibdose4b.toLocaleDateString() + ').');
+                $('.hib').append('</br>' + firstdose + ' ');
+                $('.hibbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.hib2').append('</br>' + nextdose[i] + '</br>');
-                } 
-                break;
+                }
+                break; 
               }
             }
           }
@@ -1222,9 +1475,9 @@ $(document).ready(function(){
               else{
                 nextdose.push('3rd HiB dose between 4 and 8 weeks after dose 2. (Between ' + hibentry24wks.toLocaleDateString() + ' and ' + hibentry28wks.toLocaleDateString() + ').');
               }
-              nextdose.push('4th HiB dose between 12 and 18 months old. (Between ' + hibdose4a.toLocaleDateString() + ' and ' + hibdose4b.toLocaleDateString() + ').');
-              $('.hib').append('</br>' + firstdose + '</br>');
-              $('.hibbutton').append('+');
+              nextdose.push('4th HiB dose (final dose) between 12 and 18 months old. (Between ' + hibdose4a.toLocaleDateString() + ' and ' + hibdose4b.toLocaleDateString() + ').');
+              $('.hib').append('</br>' + firstdose + ' ');
+              $('.hibbutton').append('+ </br>');
               for(i=0; i<nextdose.length; i++){
                 $('.hib2').append('</br>' + nextdose[i] + '</br>');
               }
@@ -1256,8 +1509,8 @@ $(document).ready(function(){
                   nextdose.push('3rd HiB dose (final dose) 8 to 12 weeks after dose 2 AND after 12 months old. (After ' + months12.toLocaleDateString() + ').');
                 }
               }
-              $('.hib').append('</br>' + firstdose + '</br>');
-              $('.hibbutton').append('+');
+              $('.hib').append('</br>' + firstdose + ' ');
+              $('.hibbutton').append('+ </br>');
               for(i=0; i<nextdose.length; i++){
                 $('.hib2').append('</br>' + nextdose[i] + '</br>');
               }
@@ -1275,8 +1528,8 @@ $(document).ready(function(){
               }
               else{
               }
-              $('.hib').append('</br>' + firstdose + '</br>');
-              $('.hibbutton').append('+');
+              $('.hib').append('</br>' + firstdose + ' ');
+              $('.hibbutton').append('+ </br>');
               for(i=0; i<nextdose.length; i++){
                 $('.hib2').append('</br>' + nextdose[i] + '</br>');
               }
@@ -1296,8 +1549,8 @@ $(document).ready(function(){
                 else{
                 }
               }
-              $('.hib').append('</br>' + firstdose + '</br>');
-              $('.hibbutton').append('+');
+              $('.hib').append('</br>' + firstdose + ' ');
+              $('.hibbutton').append('+ </br>');
               for(i=0; i<nextdose.length; i++){
                 $('.hib2').append('</br>' + nextdose[i] + '</br>');
               }
@@ -1313,27 +1566,27 @@ $(document).ready(function(){
             if(hibdates.length==2){
               if(today>hibdose3b){
                 if(today>months4 && today<months7){
-                  firstdose.push('Missed 3rd HiB dose. Catch up schedule:');
+                  firstdose.push('3rd HiB dose overdue. Catch up schedule:');
                   if(today>hibentry24wks){
                     nextdose.push('3rd HiB dose today.');
                   }
                   else{
                     nextdose.push('3rd HiB dose between 4 and 8 weeks after dose 2. (Between ' + hibentry24wks.toLocaleDateString() + ' and ' + hibentry28wks.toLocaleDateString() + ').');
                   }
-                  nextdose.push('4th HiB dose between 12 and 18 months old. (Between ' + hibdose4a.toLocaleDateString() + ' and ' + hibdose4b.toLocaleDateString() + ').');
-                  $('.hib').append('</br>' + firstdose + '</br>');
-                  $('.hibbutton').append('+');
+                  nextdose.push('4th HiB dose (final dose) between 12 and 18 months old. (Between ' + hibdose4a.toLocaleDateString() + ' and ' + hibdose4b.toLocaleDateString() + ').');
+                  $('.hib').append('</br>' + firstdose + ' ');
+                  $('.hibbutton').append('+ </br>');
                   for(i=0; i<nextdose.length; i++){
                     $('.hib2').append('</br>' + nextdose[i] + '</br>');
                   }
                   break; 
                 }
                 else if(today>months7 && today<months12){
-                  firstdose.push('Missed 3rd HiB dose. Catch up schedule:');
+                  firstdose.push('3rd HiB dose overdue. Catch up schedule:');
                   if(hibentry1<months7){
                     if(today>hibentry24wks){
                       nextdose.push('3rd HiB dose today.');
-                      nextdose.push('4th HiB dose 8 to 12 weeks after dose 3 AND after 12 months old.');
+                      nextdose.push('4th HiB dose (final dose) 8 to 12 weeks after dose 3 AND after 12 months old.');
                     }
                     else{
                       if(hibentry34wks>months12){
@@ -1345,16 +1598,16 @@ $(document).ready(function(){
                       }
                     }
                   }
-                  $('.hib').append('</br>' + firstdose + '</br>');
-                  $('.hibbutton').append('+');
+                  $('.hib').append('</br>' + firstdose + ' ');
+                  $('.hibbutton').append('+ </br>');
                   for(i=0; i<nextdose.length; i++){
                     $('.hib2').append('</br>' + nextdose[i] + '</br>');
                   }
-                  break; 
+                  break;  
                 }
                 else if(today>months12 && today<months15){
                   if(hibentry1<months12){
-                  firstdose.push('Missed 3rd HiB dose. Catch up schedule:');
+                  firstdose.push('3rd HiB dose overdue. Catch up schedule:');
                     if(today>hibentry28wks){
                       nextdose.push('3rd HiB dose (final dose) today.');
                     }
@@ -1364,8 +1617,8 @@ $(document).ready(function(){
                   }
                   else{
                   }
-                  $('.hib').append('</br>' + firstdose + '</br>');
-                  $('.hibbutton').append('+');
+                  $('.hib').append('</br>' + firstdose + ' ');
+                  $('.hibbutton').append('+ </br>');
                   for(i=0; i<nextdose.length; i++){
                     $('.hib2').append('</br>' + nextdose[i] + '</br>');
                   }
@@ -1373,7 +1626,7 @@ $(document).ready(function(){
                 }
                 else if(today>months15 && today<months60){
                   if(hibentry1<months12){
-                    firstdose.push('Missed 3rd HiB dose. Catch up schedule:');
+                    firstdose.push('3rd HiB dose overdue. Catch up schedule:');
                     if(hibentry2<months15){
                       if(today>hibentry28wks){
                         nextdose.push('3rd HiB dose (final dose) today.');
@@ -1383,15 +1636,15 @@ $(document).ready(function(){
                       }
                     }
                   }
-                  $('.hib').append('</br>' + firstdose + '</br>');
-                  $('.hibbutton').append('+');
+                  $('.hib').append('</br>' + firstdose + ' ');
+                  $('.hibbutton').append('+ </br>');
                   for(i=0; i<nextdose.length; i++){
                     $('.hib2').append('</br>' + nextdose[i] + '</br>');
                   }
                   break; 
                 }
                 else{
-                  firstdose.push('Missed 3rd HiB dose. See physician.');
+                  firstdose.push('3rd HiB dose overdue. See physician.');
                   $('.hib').append('</br>' + firstdose + '</br>');
                   break;
                 }
@@ -1403,13 +1656,13 @@ $(document).ready(function(){
                 else{
                   firstdose.push('3rd HiB dose between 6 and 9 months old. (Between ' + hibdose3a.toLocaleDateString() + ' and ' + hibdose3b.toLocaleDateString() + ').');
                 }
-                nextdose.push('4th HiB dose between 12 and 18 months old. (Between ' + hibdose4a.toLocaleDateString() + ' and ' + hibdose4b.toLocaleDateString() + ').');
-                $('.hib').append('</br>' + firstdose + '</br>');
-                $('.hibbutton').append('+');
+                nextdose.push('4th HiB dose (final dose) between 12 and 18 months old. (Between ' + hibdose4a.toLocaleDateString() + ' and ' + hibdose4b.toLocaleDateString() + ').');
+                $('.hib').append('</br>' + firstdose + ' ');
+                $('.hibbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.hib2').append('</br>' + nextdose[i] + '</br>');
                 }
-                break; 
+                break;  
               }
             }
           }
@@ -1436,8 +1689,8 @@ $(document).ready(function(){
                 else{
                 }
               }
-              $('.hib').append('</br>' + firstdose + '</br>');
-              $('.hibbutton').append('+');
+              $('.hib').append('</br>' + firstdose + ' ');
+              $('.hibbutton').append('+ </br>');
               for(i=0; i<nextdose.length; i++){
                 $('.hib2').append('</br>' + nextdose[i] + '</br>');
               }
@@ -1451,8 +1704,8 @@ $(document).ready(function(){
                     nextdose.push('4th HiB dose (final dose) today.');
                   }
                 }
-                $('.hib').append('</br>' + firstdose + '</br>');
-                $('.hibbutton').append('+');
+                $('.hib').append('</br>' + firstdose + ' ');
+                $('.hibbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.hib2').append('</br>' + nextdose[i] + '</br>');
                 }
@@ -1469,29 +1722,29 @@ $(document).ready(function(){
             if(hibdates.length==3){
               if(today>hibdose4b){
                 if(today>months15 && today<months60){
-                  firstdose.push('Missed 4th HiB dose. Catch up schedule:'); 
+                  firstdose.push('4th HiB dose overdue. Catch up schedule:'); 
                   if(hibentry3<months15){
                     if(hibentry3<months12){
                       nextdose.push('4t HiB dose (final dose) today.');
                     }
                   }
-                  $('.hib').append('</br>' + firstdose + '</br>');
-                  $('.hibbutton').append('+');
+                  $('.hib').append('</br>' + firstdose + ' ');
+                  $('.hibbutton').append('+ </br>');
                   for(i=0; i<nextdose.length; i++){
                     $('.hib2').append('</br>' + nextdose[i] + '</br>');
                   }
                   break; 
                 }
-                firstdose.push('Missed 4th HiB dose. See physician.');
+                firstdose.push('4th HiB dose overdue. See physician.');
                 $('.hib').append('</br>' + firstdose + '</br>');
                 break;
               }
               else{
                 if(today>hibdose4a){
-                  firstdose.push('4th HiB dose bewteen 12 and 18 months old. (By' + hibdose4b.toLocaleDateString() + ').');
+                  firstdose.push('4th HiB dose (final dose) bewteen 12 and 18 months old. (By' + hibdose4b.toLocaleDateString() + ').');
                 }
                 else{
-                  firstdose.push('4th HiB dose between 12 and 18 months old. (Between ' + hibdose4a.toLocaleDateString() + ' and ' + hibdose4b.toLocaleDateString() + ').')
+                  firstdose.push('4th HiB dose (final dose) between 12 and 18 months old. (Between ' + hibdose4a.toLocaleDateString() + ' and ' + hibdose4b.toLocaleDateString() + ').')
                 }
                 $('.hib').append('</br>' + firstdose + '</br>');
                 break;
@@ -1577,8 +1830,8 @@ $(document).ready(function(){
                   nextdose.push('2nd HiB dose 4 to 8 weeks after dose 1. (Between ' + pedvaxentry14wks.toLocaleDateString() + ' and ' + pedvaxentry18wks.toLocaleDateString() + ').');
                   nextdose.push('3rd HiB dose (final dose) after 12 months old. (After ' + months12.toLocaleDateString() + ').');
                 }
-                $('.pedvax').append('</br>' + firstdose + '</br>');
-                $('.pedvaxbutton').append('+');
+                $('.pedvax').append('</br>' + firstdose + ' ');
+                $('.pedvaxbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.pedvax2').append('</br>' + nextdose[i] + '</br>');
                 } 
@@ -1601,12 +1854,12 @@ $(document).ready(function(){
                   nextdose.push('2nd HiB dose 4 to 8 weeks after dose 1. (Between ' + pedvaxentry14wks.toLocaleDateString() + ' and ' + pedvaxentry18wks.toLocaleDateString() + ').');
                   nextdose.push('3rd HiB dose (final dose) 8 to 12 weeks after dose 1 AND after 12 months old.');
                 }
-                $('.pedvax').append('</br>' + firstdose + '</br>');
-                $('.pedvaxbutton').append('+');
+                $('.pedvax').append('</br>' + firstdose + ' ');
+                $('.pedvaxbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.pedvax2').append('</br>' + nextdose[i] + '</br>');
-                }
-                break; 
+                } 
+                break;
               }
             }
             else if(today>months12 && today<months15){
@@ -1619,7 +1872,7 @@ $(document).ready(function(){
                   }
                   else{
                     nextdose.push('2nd HiB dose 4 to 8 weeks after dose 1. (Between ' + pedvaxentry14wks.toLocaleDateString() + ' and ' + pedvaxentry18wks.toLocaleDateString() + ').');
-                    nextdose.push('3rd HiB dose 8 to 12 weeks after dose 2 AND after 12 months old.');
+                    nextdose.push('3rd HiB dose (final dose) 8 to 12 weeks after dose 2 AND after 12 months old.');
                   }
                 }
                 else{
@@ -1630,8 +1883,8 @@ $(document).ready(function(){
                     nextdose.push('2nd HiB dose (final dose) 8 to 12 weeks after dose 1. (Between ' + pedvaxentry18wks.toLocaleDateString() + ' and ' + pedvaxentry112wks.toLocaleDateString() + ').');
                   }
                 }
-                $('.pedvax').append('</br>' + firstdose + '</br>');
-                $('.pedvaxbutton').append('+');
+                $('.pedvax').append('</br>' + firstdose + ' ');
+                $('.pedvaxbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.pedvax2').append('</br>' + nextdose[i] + '</br>');
                 } 
@@ -1647,11 +1900,11 @@ $(document).ready(function(){
                     nextdose.push('3rd HiB dose (final dose) 8 to 12 weeks after dose 2. (Between ' + pedvaxentry28wks.toLocaleDateString() + ' and ' + pedvaxentry212wks.toLocaleDateString() + ').');
                   }
                 }
-                $('.pedvax').append('</br>' + firstdose + '</br>');
-                $('.pedvaxbutton').append('+');
+                $('.pedvax').append('</br>' + firstdose + ' ');
+                $('.pedvaxbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.pedvax2').append('</br>' + nextdose[i] + '</br>');
-                }
+                } 
                 break; 
               }
             }
@@ -1670,11 +1923,11 @@ $(document).ready(function(){
                     nextdose.push('2nd HiB dose (final dose) 8 to 12 weeks after dose 1. (Between ' + pedvaxentry18wks.toLocaleDateString() + ' and ' + pedvaxentry112wks.toLocaleDateString() + ').');
                   }
                 }
-                $('.pedvax').append('</br>' + firstdose + '</br>');
-                $('.pedvaxbutton').append('+');
+                $('.pedvax').append('</br>' + firstdose + ' ');
+                $('.pedvaxbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.pedvax2').append('</br>' + nextdose[i] + '</br>');
-                }
+                } 
                 break; 
               }
               else if(pedvaxdates.length==2){
@@ -1689,12 +1942,12 @@ $(document).ready(function(){
                     }
                   }
                 }
-                $('.pedvax').append('</br>' + firstdose + '</br>');
-                $('.pedvaxbutton').append('+');
+                $('.pedvax').append('</br>' + firstdose + ' ');
+                $('.pedvaxbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.pedvax2').append('</br>' + nextdose[i] + '</br>');
-                }
-                break; 
+                } 
+                break;
               }
             }
             else{
@@ -1707,7 +1960,7 @@ $(document).ready(function(){
             if(pedvaxdates.length==1){
               if(today>pedvaxdose2b){
                 if(today>months4 && today<months7){
-                  firstdose.push('Missed 2nd HiB dose. Catch up schedule:');
+                  firstdose.push('2nd HiB dose overdue. Catch up schedule:');
                   if(today>pedvaxentry14wks){
                     nextdose.push('2nd HiB dose today.');
                     nextdose.push('3rd HiB dose (final dose) after 12 months old. (After ' + months12.toLocaleDateString() + ').');
@@ -1716,15 +1969,15 @@ $(document).ready(function(){
                     nextdose.push('2nd HiB dose 4 to 8 weeks after dose 1. (Between ' + hibentry14wks.toLocaleDateString() + ' and ' + hibentry18wks.toLocaleDateString() + ')');
                     nextdose.push('3rd HiB dose (final dose) after 12 months old. (After ' + months12.toLocaleDateString() + ').');
                   }
-                  $('.pedvax').append('</br>' + firstdose + '</br>');
-                  $('.pedvaxbutton').append('+');
+                  $('.pedvax').append('</br>' + firstdose + ' ');
+                  $('.pedvaxbutton').append('+ </br>');
                   for(i=0; i<nextdose.length; i++){
                     $('.pedvax2').append('</br>' + nextdose[i] + '</br>');
                   } 
                   break;
                 }
                 else if(today>months7 && today<months12){
-                  firstdose.push('Missed 2nd HiB dose. Catch up schedule:');
+                  firstdose.push('2nd HiB dose overdue. Catch up schedule:');
                   if(today>pedvaxentry14wks){
                     nextdose.push('2nd HiB dose today.');
                     nextdose.push('3rd HiB dose (final dose) 8 to 12 weeks after dose 2 AND after 12 months old.');
@@ -1733,22 +1986,22 @@ $(document).ready(function(){
                     nextdose.push('2nd HiB dose 4 to 8 weeks after dose 1. (Between ' + pedvaxentry14wks.toLocaleDateString() + ' and ' + pedvaxentry18wks.toLocaleDateString() + ').');
                     nextdose.push('3rd HiB dose (final dose) 8 to 12 weeks after dose 2 AND after 12 months old.');
                   }
-                  $('.pedvax').append('</br>' + firstdose + '</br>');
-                  $('.pedvaxbutton').append('+');
+                  $('.pedvax').append('</br>' + firstdose + ' ');
+                  $('.pedvaxbutton').append('+ </br>');
                   for(i=0; i<nextdose.length; i++){
                     $('.pedvax2').append('</br>' + nextdose[i] + '</br>');
-                  }
-                  break; 
+                  } 
+                  break;
                 }
                 else if(today>months12 && today<months15){
-                  firstdose.push('Missed 2nd HiB dose. Catch up schedule:');
+                  firstdose.push('2nd HiB dose overdue. Catch up schedule:');
                   if(pedvaxentry1<months12){
                     if(today>pedvaxentry14wks){
                       nextdose.push('2nd HiB dose today.');
                       nextdose.push('3rd HiB dose (final dose) 8 weeks after dose 2.');
                     }
                     else{
-                      nextdose.push('2nd HiB dose 4 to 8 weeks after dose 1. (Between ' + pedvaxentry14wks.toLocaleDateString() + ' and ' + pedvaxentry18wks.toLocaleDateString() + ').');
+                      nextdose.push('2nd HiB dose (final dose) 4 to 8 weeks after dose 1. (Between ' + pedvaxentry14wks.toLocaleDateString() + ' and ' + pedvaxentry18wks.toLocaleDateString() + ').');
                     }
                   }
                   else{
@@ -1759,20 +2012,20 @@ $(document).ready(function(){
                       nextdose.push('2nd HiB dose (final dose) 8 to 12 weeks after dose 1. (Between ' + pedvaxentry18wks.toLocaleDateString() + ' and ' + pedvaxentry112wks.toLocaleDateString() + ').');
                     }
                   }
-                  $('.pedvax').append('</br>' + firstdose + '</br>');
-                  $('.pedvaxbutton').append('+');
+                  $('.pedvax').append('</br>' + firstdose + ' ');
+                  $('.pedvaxbutton').append('+ </br>');
                   for(i=0; i<nextdose.length; i++){
                     $('.pedvax2').append('</br>' + nextdose[i] + '</br>');
-                  }
-                  break; 
+                  } 
+                  break;
                 }
                 else if(today>months15 && today<months60){
                   if(pedvaxentry1<months12){
-                    firstdose.push('Missed 2nd HiB dose. Catch up schedule:');
+                    firstdose.push('2nd HiB dose overdue. Catch up schedule:');
                     nextdose.push('2nd HiB dose (final dose) today.');
                   }
                   else if(pedvaxentry1>months12 && pedvaxentry1<months15){
-                    firstdose.push('Missed 2nd HiB dose. Catch up schedule:');
+                    firstdose.push('2nd HiB dose overdue. Catch up schedule:');
                     if(today>pedvaxentry18wks){
                       nextdose.push('2nd HiB dose (final dose) today.');
                     }
@@ -1780,15 +2033,15 @@ $(document).ready(function(){
                       nextdose.push('2nd HiB dose (final dose) 8 to 12 weeks after dose 1. (Bewteen ' + hibentry18wks.toLocaleDateString() + ' and ' + hibentry112wks.toLocaleDateString() + ').');
                     }
                   }
-                  $('.pedvax').append('</br>' + firstdose + '</br>');
-                  $('.pedvaxbutton').append('+');
+                  $('.pedvax').append('</br>' + firstdose + ' ');
+                  $('.pedvaxbutton').append('+ </br>');
                   for(i=0; i<nextdose.length; i++){
                     $('.pedvax2').append('</br>' + nextdose[i] + '</br>');
-                  }
-                  break; 
+                  } 
+                  break;
                 }
                 else{
-                  firstdose.push('Missed 2nd HiB dose. See physician.');
+                  firstdose.push('2nd HiB dose overdue. See physician.');
                   $('.pedvax').append('</br>' + firstdose + '</br>');
                   break;
                 }
@@ -1800,12 +2053,13 @@ $(document).ready(function(){
                 else{
                   firstdose.push('2nd HiB dose between 4 and 6 months old. (Between ' + pedvaxdose2a.toLocaleDateString() + ' and ' + pedvaxdose2b.toLocaleDateString() + ').');
                 }
-                nextdose.push('3rd HiB dose between 12 and 15 months old. (Bewteen ' + pedvaxdose3a.toLocaleDateString() + ' and ' + pedvaxdose3b.toLocaleDateString() + ').');
-                $('.pedvax').append('</br>' + firstdose + '</br>');
-                $('.pedvaxbutton').append('+');
+                nextdose.push('3rd HiB dose (final dose) between 12 and 15 months old. (Bewteen ' + pedvaxdose3a.toLocaleDateString() + ' and ' + pedvaxdose3b.toLocaleDateString() + ').');
+                $('.pedvax').append('</br>' + firstdose + ' ');
+                $('.pedvaxbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.pedvax2').append('</br>' + nextdose[i] + '</br>');
                 } 
+                break;
               }
             }
           }
@@ -1829,12 +2083,12 @@ $(document).ready(function(){
                     nextdose.push('3rd HiB dose (final dose) 8 to 12 weeks after dose 2. (Between ' + pedvaxentry28wks.toLocaleDateString() + ' and ' + pedvaxentry212wks.toLocaleDateString() + ').');
                   }
                 }
-                $('.pedvax').append('</br>' + firstdose + '</br>');
-                $('.pedvaxbutton').append('+');
+                $('.pedvax').append('</br>' + firstdose + ' ');
+                $('.pedvaxbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.pedvax2').append('</br>' + nextdose[i] + '</br>');
-                }
-                break; 
+                } 
+                break;
               }
               else{
                 firstdose.push('2nd HiB dose administered too late. See physician.');
@@ -1855,12 +2109,12 @@ $(document).ready(function(){
                     }
                   }
                 }
-                $('.pedvax').append('</br>' + firstdose + '</br>');
-                $('.pedvaxbutton').append('+');
+                $('.pedvax').append('</br>' + firstdose + ' ');
+                $('.pedvaxbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.pedvax2').append('</br>' + nextdose[i] + '</br>');
-                }
-                break; 
+                } 
+                break;
               }
             }
             else{
@@ -1872,16 +2126,16 @@ $(document).ready(function(){
           else{
             if(pedvaxdates.length==2){
               if(today>pedvaxdose3b){
-                firstdose.push('Missed 3rd HiB dose. See physician.');
+                firstdose.push('3rd HiB dose overdue. See physician.');
                 $('.pedvax').append('</br>' + firstdose + '</br>');
                 break; 
               }
               else{
                 if(today>pedvaxdose3a){
-                  firstdose.push('3rd HiB dose between 12 and 15 months old. (By ' + pedvaxdose3b.toLocaleDateString() + ').');
+                  firstdose.push('3rd HiB dose (final dose) between 12 and 15 months old. (By ' + pedvaxdose3b.toLocaleDateString() + ').');
                 }
                 else{
-                  firstdose.push('3rd HiB dose between 12 and 15 months old. (Between ' + pedvaxdose3a.toLocaleDateString() + ' and ' + pedvaxdose3b.toLocaleDateString() + ').');
+                  firstdose.push('3rd HiB dose (final dose) between 12 and 15 months old. (Between ' + pedvaxdose3a.toLocaleDateString() + ' and ' + pedvaxdose3b.toLocaleDateString() + ').');
                 }
                 $('.pedvax').append('</br>' + firstdose + '</br>');
                 break;
@@ -1986,41 +2240,41 @@ $(document).ready(function(){
       if(pcvdates.length==0){
         if(today>pcvdose1b){
           if(today>months4 && today<months12){
-            firstdose.push('Missed 1st PCV13 dose. Catch up schedule:');
+            firstdose.push('1st PCV13 dose overdue. Catch up schedule:');
             nextdose.push('1st PCV13 dose today.');
             nextdose.push('2nd PCV13 dose 4 to 8 weeks after dose 1.');
             nextdose.push('3rd PCV13 dose 4 to 8 weeks after dose 2.');
-            nextdose.push('4th PCV13 dose 12 to 15 months old.');
-            $('.pcv').append('</br>' + firstdose + '</br>');
-            $('.pcvbutton').append('+');
+            nextdose.push('4th PCV13 dose (final dose) 12 to 15 months old.');
+            $('.pcv').append('</br>' + firstdose + ' ');
+            $('.pcvbutton').append('+ </br>');
             for(i=0; i<nextdose.length; i++){
               $('.pcv2').append('</br>' + nextdose[i] + '</br>');
             }
             break; 
           }
           else if(today>months12 && today<months24){
-            firstdose.push('Missed 1st PCV13 dose. Catch up schedule:');
+            firstdose.push('1st PCV13 dose overdue. Catch up schedule:');
             nextdose.push('1st PCV13 dose today.');
-            nextdose.push('2nd PCV13 dose at least 8 weeks after dose 2.');
-            $('.pcv').append('</br>' + firstdose + '</br>');
-            $('.pcvbutton').append('+');
+            nextdose.push('2nd PCV13 dose (final dose) at least 8 weeks after dose 2.');
+            $('.pcv').append('</br>' + firstdose + ' ');
+            $('.pcvbutton').append('+ </br>');
             for(i=0; i<nextdose.length; i++){
               $('.pcv2').append('</br>' + nextdose[i] + '</br>');
             }
             break;   
           }
           else if (today>months24 && today<months60){
-            firstdose.push('Missed 1st PCV13 dose. Catch up schedule: ');
-            nextdose.push('1st PCV13 dose today. No additional doses.');
-            $('.pcv').append('</br>' + firstdose + '</br>');
-            $('.pcvbutton').append('+');
+            firstdose.push('1st PCV13 dose overdue. Catch up schedule: ');
+            nextdose.push('1st PCV13 dose (final dose) today.');
+            $('.pcv').append('</br>' + firstdose + ' ');
+            $('.pcvbutton').append('+ </br>');
             for(i=0; i<nextdose.length; i++){
               $('.pcv2').append('</br>' + nextdose[i] + '</br>');
-            } 
-            break;
+            }
+            break; 
           }
           else{
-            firstdose.push('Missed 1st PCV13 dose. See physician.');
+            firstdose.push('1st PCV13 dose overdue. See physician.');
             $('.pcv').append('</br>' + firstdose + '</br>');
             break;
           }
@@ -2034,9 +2288,9 @@ $(document).ready(function(){
           }
           nextdose.push('2nd PCV13 dose between 4 and 6 months old AND at least 4 weeks after 1st PCV13 dose.');
           nextdose.push('3rd PCV13 dose between 6 and 9 months old AND at least 4 weeks after 2nd PCV13 dose.');
-          nextdose.push('4th PCV13 dose between 12 and 18 months old.');
-          $('.pcv').append('</br>' + firstdose + '</br>');
-          $('.pcvbutton').append('+');
+          nextdose.push('4th PCV13 dose (final dose) between 12 and 18 months old.');
+          $('.pcv').append('</br>' + firstdose + ' ');
+          $('.pcvbutton').append('+ </br>');
           for(i=0; i<nextdose.length; i++){
             $('.pcv2').append('</br>' + nextdose[i] + '</br>');
           }
@@ -2056,11 +2310,11 @@ $(document).ready(function(){
             firstdose.push('1st PCV13 dose administered too late. Catch up schedule:');
               if(today>pcventry14wks){
                 nextdose.push('2nd PCV13 dose today.');
-                nextdose.push('3rd PCV13 at least 8 weeks after dose 2 AND after 12 months old.');
+                nextdose.push('3rd PCV13 (final dose) at least 8 weeks after dose 2 AND after 12 months old.');
               }
               else{
                 nextdose.push('2nd PCV13 dose 4 to 8 weeks after dose 1. (Between ' + pcventry14wks.toLocaleDateString() + ' and ' + pcventry18wks.toLocaleDateString() + ').');
-                nextdose.push('3rd PCV13 dose at least 8 weeks after dose 2 AND after 12 months old.');
+                nextdose.push('3rd PCV13 dose (final dose) at least 8 weeks after dose 2 AND after 12 months old.');
               }
             }
             else if(today>months12 && today<months24){
@@ -2068,11 +2322,11 @@ $(document).ready(function(){
               if(pcventry1<months12){
                 if(today>pcventry14wks){
                   nextdose.push('2nd PCV13 dose today.');
-                  nextdose.push('3rd PCV13 dose 8 weeks after dose 2.');
+                  nextdose.push('3rd PCV13 dose (final dose) 8 weeks after dose 2.');
                 }
                 else{
                   nextdose.push('2nd PCV13 dose 4 to 8 weeks after dose 1. (Between ' + pcventry14wks.toLocaleDateString() + ' and ' + pcventry18wks.toLocaleDateString() + ').');
-                  nextdose.push('3rd PCV13 dose 8 weeks after dose 2.');
+                  nextdose.push('3rd PCV13 dose (final dose) 8 weeks after dose 2.');
                 }
               }
               else{
@@ -2080,11 +2334,11 @@ $(document).ready(function(){
                   nextdose.push('2nd PCV13 dose today.');
                 }
                 else{
-                  nextdose.push('2nd PCV13 dose 8 to 12 weeks after dose 1. (Between ' + pcventry18wks.toLocaleDateString() + ' and ' + pcventry112wks.toLocaleDateString() + ').');
+                  nextdose.push('2nd PCV13 dose (final dose) 8 to 12 weeks after dose 1. (Between ' + pcventry18wks.toLocaleDateString() + ' and ' + pcventry112wks.toLocaleDateString() + ').');
                 }
               }
-              $('.pcv').append('</br>' + firstdose + '</br>');
-              $('.pcvbutton').append('+');
+              $('.pcv').append('</br>' + firstdose + ' ');
+              $('.pcvbutton').append('+ </br>');
               for(i=0; i<nextdose.length; i++){
                 $('.pcv2').append('</br>' + nextdose[i] + '</br>');
               }
@@ -2093,9 +2347,9 @@ $(document).ready(function(){
             else if(today>months24 && today<months60){
               if(pcventry1<months12){
                 firstdose.push('1st PCV13 dose administered too late. Catch up schedule:');
-                nextdose.push('2nd PCV13 dose today. No additional doses needed.');
-                $('.pcv').append('</br>' + firstdose + '</br>');
-                $('.pcvbutton').append('+');
+                nextdose.push('2nd PCV13 dose (final dose) today. No additional doses needed.');
+                $('.pcv').append('</br>' + firstdose + ' ');
+                $('.pcvbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.pcv2').append('</br>' + nextdose[i] + '</br>');
                 }
@@ -2105,17 +2359,17 @@ $(document).ready(function(){
                 if(pcventry1<year2){
                   firstdose.push('1st PCV13 dose administered too late. Catch up schedule:');
                   if(today>pcventry18wks){
-                    nextdose.push('2nd PCV13 dose today. No additional doses needed.');
+                    nextdose.push('2nd PCV13 dose (final dose) today. No additional doses needed.');
                   }
                   else{
-                    nextdose.push('2nd PCV13 dose between 8 and 12 weeks after dose 1. (Between ' + pcventry18wks.toLocaleDateString() + ' and ' + pcventry112wks.toLocaleDateString() + ').');
+                    nextdose.push('2nd PCV13 dose (final dose) between 8 and 12 weeks after dose 1. (Between ' + pcventry18wks.toLocaleDateString() + ' and ' + pcventry112wks.toLocaleDateString() + ').');
                   }
-                  $('.pcv').append('</br>' + firstdose + '</br>');
-                  $('.pcvbutton').append('+');
-                  for(i=0; i<nextdose.length; i++){
-                    $('.pcv2').append('</br>' + nextdose[i] + '</br>');
-                  }
-                  break; 
+                $('.pcv').append('</br>' + firstdose + ' ');
+                $('.pcvbutton').append('+ </br>');
+                for(i=0; i<nextdose.length; i++){
+                  $('.pcv2').append('</br>' + nextdose[i] + '</br>');
+                }
+                break; 
                 }
               }
             }
@@ -2135,7 +2389,7 @@ $(document).ready(function(){
           if(pcvdates.length==1){
             if(today>pcvdose2b){
               if(today>months4 && today<months7){
-                firstdose.push('Missed 2nd PCV13 dose. Catch up schedule: ');
+                firstdose.push('2nd PCV13 dose overdue. Catch up schedule: ');
                 if(today>pcventry14wks){
                   nextdose.push('2nd PCV13 dose today.');
                 }
@@ -2143,59 +2397,59 @@ $(document).ready(function(){
                   nextdose.push('2nd PCV13 dose 4 to 8 weeks after dose 1. (Between ' + pcventry14wks.toLocaleDateString() + ' and ' + pcventry18wks.toLocaleDateString() + ').');
                 }
                 nextdose.push('3rd PCV13 dose 4 to 8 weeks after dose 2.');
-                nextdose.push('4th PCV13 dose between 12 and 18 months old. (Between ' + pcvdose4a.toLocaleDateString() + ' and ' + pcvdose4b.toLocaleDateString() + ').');
-                $('.pcv').append('</br>' + firstdose + '</br>');
-                $('.pcvbutton').append('+');
+                nextdose.push('4th PCV13 dose (final dose) between 12 and 18 months old. (Between ' + pcvdose4a.toLocaleDateString() + ' and ' + pcvdose4b.toLocaleDateString() + ').');
+                $('.pcv').append('</br>' + firstdose + ' ');
+                $('.pcvbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.pcv2').append('</br>' + nextdose[i] + '</br>');
                 }
                 break; 
               }
               else if(today>months7 && today<months12){
-                firstdose.push('Missed 2nd PCV13 dose. Catch up schedule: ');
+                firstdose.push('2nd PCV13 dose overdue. Catch up schedule: ');
                 if(today>pcventry14wks){
                   nextdose.push('2nd PCV13 dose today.');
                 }
                 else{
                   nextdose.push('2nd PCV13 dose 4 to 8 weeks after 1st dose. (Between ' + pcventry14wks.toLocaleDateString() + ' and ' + pcventry18wks.toLocaleDateString() + ').');
                 }
-                nextdose.push('3rd PCV13 dose at least 8 weeks after dose 2 and after 12 months old.');
-                $('.pcv').append('</br>' + firstdose + '</br>');
-                $('.pcvbutton').append('+');
+                nextdose.push('3rd PCV13 dose (final dose) at least 8 weeks after dose 2 and after 12 months old.');
+                $('.pcv').append('</br>' + firstdose + ' ');
+                $('.pcvbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.pcv2').append('</br>' + nextdose[i] + '</br>');
                 }
                 break; 
               }
               else if(today>months12 && today<months24){
-                firstdose.push('Missed 2nd PCV13 dose. Catch up schedule:');
+                firstdose.push('2nd PCV13 dose overdue. Catch up schedule:');
                 if(pcventry1<months12){
                   if(today>pcventry14wks){
                     nextdose.push('2nd PCV13 dose today.');
-                    nextdose.push('3rd PCV13 dose at least 8 weeks after dose 2.');
+                    nextdose.push('3rd PCV13 dose (final dose) at least 8 weeks after dose 2.');
                   }
                   else{
                     nextdose.push('2nd PCV13 dose 4 to 8 weeks after dose 1. (Between ' + pcventry14wks.toLocaleDateString() + ' and ' + pcventry18wks.toLocaleDateString() + ').');
-                    nextdose.push('3rd PCV13 dose at least 8 weeks after dose 2.');
+                    nextdose.push('3rd PCV13 dose (final dose) at least 8 weeks after dose 2.');
                   }
                 }
                 else{
                   if(today>pcventry18wks){
-                    nextdose.push('2nd PCV13 dose today.');
+                    nextdose.push('2nd PCV13 dose (final dose) today.');
                   }
                   else{
-                    nextdose.push('2nd PCV13 dose 8 to 12 weeks after dose 1. (Between ' + pcventry18wks.toLocaleDateString() + ' and ' + pcventry112wks.toLocaleDateString() + ').');
+                    nextdose.push('2nd PCV13 dose (final dose) 8 to 12 weeks after dose 1. (Between ' + pcventry18wks.toLocaleDateString() + ' and ' + pcventry112wks.toLocaleDateString() + ').');
                   }
                 }
-                $('.pcv').append('</br>' + firstdose + '</br>');
-                $('.pcvbutton').append('+');
+                $('.pcv').append('</br>' + firstdose + ' ');
+                $('.pcvbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.pcv2').append('</br>' + nextdose[i] + '</br>');
                 }
-                break; 
+                break;  
               }
               else if(today>months24 && today<months60){
-                firstdose.push('Missed 2nd PCV13 dose. Catch up schedule:');
+                firstdose.push('2nd PCV13 dose overdue. Catch up schedule:');
                 if(pcventry1<year1){
                   nextdose.push('2nd PCV13 dose (final dose) today.');
                 }
@@ -2209,15 +2463,15 @@ $(document).ready(function(){
                     }
                   }
                 }
-                $('.pcv').append('</br>' + firstdose + '</br>');
-                $('.pcvbutton').append('+');
+                $('.pcv').append('</br>' + firstdose + ' ');
+                $('.pcvbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.pcv2').append('</br>' + nextdose[i] + '</br>');
                 }
                 break; 
               }
               else{
-                firstdose.push('Missed 2nd PCV13 dose. See physician.');
+                firstdose.push('2nd PCV13 dose overdue. See physician.');
                 $('.pcv').append('</br>' + firstdose + '</br>');
                 break;
               }
@@ -2230,9 +2484,9 @@ $(document).ready(function(){
                 firstdose.push('2nd PCV13 dose between 4 and 6 months old. (Between ' + pcvdose2a.toLocaleDateString() + ' and ' + pcvdose2b.toLocaleDateString() + ').');
               }
               nextdose.push('3rd PCV13 dose between 6 and 9 months old AND at least 4 weeks after 2nd PCV13 dose.');
-              nextdose.push('4th PCV13 dose between 12 and 18 months old.');
-              $('.pcv').append('</br>' + firstdose + '</br>');
-              $('.pcvbutton').append('+');
+              nextdose.push('4th PCV13 dose (final dose) between 12 and 18 months old.');
+              $('.pcv').append('</br>' + firstdose + ' ');
+              $('.pcvbutton').append('+ </br>');
               for(i=0; i<nextdose.length; i++){
                 $('.pcv2').append('</br>' + nextdose[i] + '</br>');
               }
@@ -2259,14 +2513,14 @@ $(document).ready(function(){
                 }
                 else{
                   nextdose.push('3rd PCV13 dose 8 to 12 weeks after dose 2. (Between ' + pcventry28wks.toLocaleDateString() + ' and ' + pcventry212wks.toLocaleDateString() + ').');
-                  nextdose.push('4th PCV13 dose at least 8 weeks after dose 3 AND after 12 months old.');
+                  nextdose.push('4th PCV13 dose (final dose) at least 8 weeks after dose 3 AND after 12 months old.');
                 }
               }
               else{
                 nextdose.push('3rd PCV13 dose at least 8 weeks after dose 2 AND after 12 months old. (After ' + pcvdose3final.toLocaleDateString() + ').');
               }
-              $('.pcv').append('</br>' + firstdose + '</br>');
-              $('.pcvbutton').append('+');
+              $('.pcv').append('</br>' + firstdose + ' ');
+              $('.pcvbutton').append('+ </br>');
               for(i=0; i<nextdose.length; i++){
                 $('.pcv2').append('</br>' + nextdose[i] + '</br>');
               }
@@ -2276,14 +2530,14 @@ $(document).ready(function(){
               if(pcventry1<months12){
                 firstdose.push('2nd PCV13 dose administered too late. Catch up schedule:');
                 if(today>pcventry28wks){
-                  nextdose.push('3rd PCV13 dose today.');
+                  nextdose.push('3rd PCV13 dose (final dose) today.');
                 }
                 else{
-                  nextdose.push('3rd PCV13 dose 8 to 12 weeks after dose 2. (Between ' + pcventry28wks.toLocaleDateString() + ' and ' + pcventry212wks.toLocaleDateString() + ').');
+                  nextdose.push('3rd PCV13 dose (final dose) 8 to 12 weeks after dose 2. (Between ' + pcventry28wks.toLocaleDateString() + ' and ' + pcventry212wks.toLocaleDateString() + ').');
                 }
               }  
-              $('.pcv').append('</br>' + firstdose + '</br>');
-              $('.pcvbutton').append('+');
+              $('.pcv').append('</br>' + firstdose + ' ');
+              $('.pcvbutton').append('+ </br>');
               for(i=0; i<nextdose.length; i++){
                 $('.pcv2').append('</br>' + nextdose[i] + '</br>');
               }
@@ -2296,8 +2550,8 @@ $(document).ready(function(){
                   nextdose.push('3rd PCV13 dose (final dose) today.');
                 }
               }
-              $('.pcv').append('</br>' + firstdose + '</br>');
-              $('.pcvbutton').append('+');
+              $('.pcv').append('</br>' + firstdose + ' ');
+              $('.pcvbutton').append('+ </br>');
               for(i=0; i<nextdose.length; i++){
                 $('.pcv2').append('</br>' + nextdose[i] + '</br>');
               }
@@ -2319,17 +2573,17 @@ $(document).ready(function(){
           if(pcvdates.length==2){
             if(today>pcvdose3b){
               if(today>months7 && today<months12){
-                firstdose.push('Missed 3rd PCV13 dose. Catch up schedule:');
+                firstdose.push('3rd PCV13 dose overdue. Catch up schedule:');
                 if(pcventry2<months7){
                   if(today>pcventry24wks){
                     nextdose.push('3rd PCV13 dose today.');
-                    nextdose.push('4th PCV13 dose at least 8 weeks after dose 3 AND after 12 months old.');
+                    nextdose.push('4th PCV13 dose (final dose) at least 8 weeks after dose 3 AND after 12 months old.');
                   }
                   else{
-                    nextdose.push('3rd PCV13 dose at least 8 weeks after dose 3 AND after 12 months old.');
+                    nextdose.push('3rd PCV13 dose (final dose) at least 8 weeks after dose 3 AND after 12 months old.');
                   }
-                  $('.pcv').append('</br>' + firstdose + '</br>');
-                  $('.pcvbutton').append('+');
+                  $('.pcv').append('</br>' + firstdose + ' ');
+                  $('.pcvbutton').append('+ </br>');
                   for(i=0; i<nextdose.length; i++){
                     $('.pcv2').append('</br>' + nextdose[i] + '</br>');
                   }
@@ -2338,15 +2592,15 @@ $(document).ready(function(){
               }
               else if (today>months12 && today<months24){
                 if(pcventry1<months12){
-                  firstdose.push('Missed 3rd PCV13 dose. Catch up schedule:');
+                  firstdose.push('3rd PCV13 dose overdue. Catch up schedule:');
                   if(today>pcventry28wks){
-                    nextdose.push('3rd PCV13 dose today.');
+                    nextdose.push('3rd PCV13 dose (final dose) today.');
                   }
                   else{
-                    nextdose.push('3rd PCV13 entry 8 to 12 weeks after dose 2. (Between ' + pcventry28wks.toLocaleDateString() + ' and ' + pcventry212wks.toLocaleDateString() + ').');
+                    nextdose.push('3rd PCV13 dose (final dose) 8 to 12 weeks after dose 2. (Between ' + pcventry28wks.toLocaleDateString() + ' and ' + pcventry212wks.toLocaleDateString() + ').');
                   }
-                  $('.pcv').append('</br>' + firstdose + '</br>');
-                  $('.pcvbutton').append('+');
+                  $('.pcv').append('</br>' + firstdose + ' ');
+                  $('.pcvbutton').append('+ </br>');
                   for(i=0; i<nextdose.length; i++){
                     $('.pcv2').append('</br>' + nextdose[i] + '</br>');
                   }
@@ -2354,7 +2608,7 @@ $(document).ready(function(){
                 }
               }
               else if(today>months24 && today<months60){
-                firstdose.push('Missed 3rd PCV13 dose. Catch up schedule:');
+                firstdose.push('3rd PCV13 dose overdue. Catch up schedule:');
                 if(pcventry1<months12){
                   if(pcventry2<months12){
                     nextdose.push('3rd PCV13 dose (final dose) today.');
@@ -2366,15 +2620,15 @@ $(document).ready(function(){
                     }
                   }
                 }
-                $('.pcv').append('</br>' + firstdose + '</br>');
-                $('.pcvbutton').append('+');
+                $('.pcv').append('</br>' + firstdose + ' ');
+                $('.pcvbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.pcv2').append('</br>' + nextdose[i] + '</br>');
                 }
                 break; 
               }
               else{
-                firstdose.push('Missed 3rd PCV13 dose. See physician.');
+                firstdose.push('3rd PCV13 dose overdue. See physician.');
                 $('.pcv').append('</br>' + firstdose + '</br>');
                 break;
               }
@@ -2386,11 +2640,11 @@ $(document).ready(function(){
               else{
                 firstdose.push('3rd PCV13 dose between 6 and 9 months old. (Between ' + pcvdose3a.toLocaleDateString() + ' and ' + pcvdose3b.toLocaleDateString() + ').');
               }
-              nextdose.push('4th PCV13 dose between 12 and 18 months old.');
-              $('.pcv').append('</br>' + firstdose + '</br>');
-              $('.pcvbutton').append('+');
-               for(i=0; i<nextdose.length; i++){
-                 $('.pcv2').append('</br>' + nextdose[i] + '</br>');
+              nextdose.push('4th PCV13 dose (final dose) between 12 and 18 months old.');
+              $('.pcv').append('</br>' + firstdose + ' ');
+              $('.pcvbutton').append('+ </br>');
+              for(i=0; i<nextdose.length; i++){
+                $('.pcv2').append('</br>' + nextdose[i] + '</br>');
               }
               break; 
             }
@@ -2415,8 +2669,8 @@ $(document).ready(function(){
                 else{
                   nextdose.push('4th PCV13 dose (final dose) 8 to 12 weeks after dose 3. (Between ' + pcventry38wks.toLocaleDateString() + ' and ' + pcventry312wks.toLocaleDateString() + ').');
                 }
-                $('.pcv').append('</br>' + firstdose + '</br>');
-                $('.pcvbutton').append('+');
+                $('.pcv').append('</br>' + firstdose + ' ');
+                $('.pcvbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.pcv2').append('</br>' + nextdose[i] + '</br>');
                 }
@@ -2430,8 +2684,8 @@ $(document).ready(function(){
               }
               else{
               }
-              $('.pcv').append('</br>' + firstdose + '</br>');
-              $('.pcvbutton').append('+');
+              $('.pcv').append('</br>' + firstdose + ' ');
+              $('.pcvbutton').append('+ </br>');
               for(i=0; i<nextdose.length; i++){
                 $('.pcv2').append('</br>' + nextdose[i] + '</br>');
               }
@@ -2453,16 +2707,16 @@ $(document).ready(function(){
           if(pcvdates.length==3){
             if(today>pcvdose4b){
               if(today>months12 && today<months24){
-                firstdose.push('Missed 4th PCV13 dose. Catch up schedule:');
+                firstdose.push('4th PCV13 dose overdue. Catch up schedule:');
                 if(pcventry3<months12){
                   if(today>pcventry38wks){
-                    nextdose.push('4th PCV13 dose today.');
+                    nextdose.push('4th PCV13 dose (final dose) today.');
                   }
                   else{
-                    nextdose.push('4th PCV13 dose between 8 and 12 weeks after dose 3. (Between ' + pcventry38wks.toLocaleDateString() + ' and ' + pcventry318wks.toLocaleDateString() + ').');
+                    nextdose.push('4th PCV13 dose (final dose) between 8 and 12 weeks after dose 3. (Between ' + pcventry38wks.toLocaleDateString() + ' and ' + pcventry318wks.toLocaleDateString() + ').');
                   }
-                  $('.pcv').append('</br>' + firstdose + '</br>');
-                  $('.pcvbutton').append('+');
+                  $('.pcv').append('</br>' + firstdose + ' ');
+                  $('.pcvbutton').append('+ </br>');
                   for(i=0; i<nextdose.length; i++){
                     $('.pcv2').append('</br>' + nextdose[i] + '</br>');
                   }
@@ -2470,17 +2724,17 @@ $(document).ready(function(){
                 }
               }
               else{
-                firstdose.push('Missed 4th PCV13 dose. See physician.');
+                firstdose.push('4th PCV13 dose overdue. See physician.');
                 $('.pcv').append('</br>' + firstdose + '</br>');
                 break;
               }
             }
             else{
               if(today>pcvdose4a){
-                firstdose.push('4th PCV13 dose between 12 and 18 months old. (By ' + pcvdose4b.toLocaleDateString() + ').');
+                firstdose.push('4th PCV13 dose (final dose) between 12 and 18 months old. (By ' + pcvdose4b.toLocaleDateString() + ').');
               }
               else{
-                firstdose.push('4th PCV13 dose between 12 and 18 months old. (Between ' + pcvdose4a.toLocaleDateString() + ' and ' + pcvdose4b.toLocaleDateString() + ').');
+                firstdose.push('4th PCV13 dose (final dose) between 12 and 18 months old. (Between ' + pcvdose4a.toLocaleDateString() + ' and ' + pcvdose4b.toLocaleDateString() + ').');
               }
               $('.pcv').append('</br>' + firstdose + '</br>');
               break;
@@ -2526,9 +2780,9 @@ $(document).ready(function(){
         var firstdose = [];
         var nextdose = [];
 
-        if(today>rotarixdose1b){
-          if(rotarixdates.length==0){
-            firstdose.push('Missed 1st Rotarix dose. See physician.');
+        if(rotarixdates.length==0){
+          if(today>rotarixdose1b){
+            firstdose.push('1st Rotarix dose overdue. See physician.');
             $('.rotarix').append('</br>' + firstdose + '</br>');
             break;
           }
@@ -2539,9 +2793,9 @@ $(document).ready(function(){
             else{
               firstdose.push('1st Rotarix dose between 6 and 20 weeks old. (Between ' + rotarixdose1a.toLocaleDateString() + ' and ' + rotarixdose1b.toLocaleDateString() + ').');
             }
-            nextdose.push('2nd Rotarix dose 4 weeks after 1st Rotarix dose.');
-            $('.rotarix').append('</br>' + firstdose + '</br>');
-            $('.rotarixbutton').append('+');
+            nextdose.push('2nd Rotarix dose (final dose) 4 weeks after dose 1.');
+            $('.rotarix').append('</br>' + firstdose + ' ');
+            $('.rotarixbutton').append('+ </br>');
             for(i=0; i<nextdose.length; i++){
               $('.rotarix2').append('</br>' + nextdose[i] + '</br>');
             }
@@ -2563,16 +2817,16 @@ $(document).ready(function(){
           else{
             if(rotarixdates.length==1){
               if(today>rotarixdose2b){
-                firstdose.push('Missed 2nd Rotarix dose. See physician.');
+                firstdose.push('2nd Rotarix dose overdue. See physician.');
                 $('.rotarix').append('</br>' + firstdose + '</br>');
                 break;
               }
               else{
                 if(today>rotarixdose2a){
-                  firstdose.push('2nd Rotarix dose 4 weeks after 1st Rotarix dose AND by 24 weeks old. (By ' + rotarixdose2b.toLocaleDateString() + ').');
+                  firstdose.push('2nd Rotarix dose (final dose) 4 weeks after dose 1 AND by 24 weeks old. (By ' + rotarixdose2b.toLocaleDateString() + ').');
                 }
                 else{
-                  firstdose.push('2nd Rotarix dose 4 weeks after 1st Rotarix dose AND by 24 weeks old. (Between ' + rotarixdose2a.toLocaleDateString() + ' and ' + rotarixdose2b.toLocaleDateString() + ').');
+                  firstdose.push('2nd Rotarix dose (final dose) 4 weeks after dose 1 AND by 24 weeks old. (Between ' + rotarixdose2a.toLocaleDateString() + ' and ' + rotarixdose2b.toLocaleDateString() + ').');
                 }
                 $('.rotarix').append('</br>' + firstdose + '</br>');
                 break;
@@ -2636,20 +2890,20 @@ $(document).ready(function(){
           else{
             if(rotateqdates.length==1){
               if(today>rotateqdose2b){
-                firstdose.push('Missed 2nd Rotateq dose. See physician.');
+                firstdose.push('2nd Rotateq dose overdue. See physician.');
                 $('.rotateq').append('</br>' + firstdose + '</br>');
                 break;
               }
               else{
                 if(today>rotateqdose2a){
-                  firstdose.push('2nd Rotateq dose 4 to 10 weeks after 1st Rotateq dose. (By ' + rotateqdose2b.toLocaleDateString() + ').');
+                  firstdose.push('2nd Rotateq dose 4 to 10 weeks after dose 1. (By ' + rotateqdose2b.toLocaleDateString() + ').');
                 }
                 else{
-                  firstdose.push('2nd Rotateq dose 4 to 10 weeks after 1st Rotateq dose. (Between ' + rotateqdose2a.toLocaleDateString() + ' and ' + rotateqdose2b.toLocaleDateString() + ').');
+                  firstdose.push('2nd Rotateq dose 4 to 10 weeks after dose 1. (Between ' + rotateqdose2a.toLocaleDateString() + ' and ' + rotateqdose2b.toLocaleDateString() + ').');
                 }
-                nextdose.push('3rd Rotateq dose 4 to 10 weeks after 2nd Rotateq dose.');
-                $('.rotateq').append('</br>' + firstdose + '</br>');
-                $('.rotateqbutton').append('+');
+                nextdose.push('3rd Rotateq dose (final dose) 4 to 10 weeks after dose 2.');
+                $('.rotateq').append('</br>' + firstdose + ' ');
+                $('.rotateqbutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.rotateq2').append('</br>' + nextdose[i] + '</br>');
                 }
@@ -2673,16 +2927,16 @@ $(document).ready(function(){
           else{
             if(rotateqdates.length==2){
               if(today>rotateqdose3b){
-                firstdose.push('Missed 3rd Rotateq dose. See physician.');
+                firstdose.push('3rd Rotateq dose overdue. See physician.');
                 $('.rotateq').append('</br>' + firstdose + '</br>');
                 break;
               }
               else{
                 if(today>rotateqdose3a){
-                  firstdose.push('3rd Rotateq dose 4 to 10 weeks after 2nd Rotateq dose. (By ' + rotateqdose3b.toLocaleDateString() + ').');
+                  firstdose.push('3rd Rotateq dose (final dose) 4 to 10 weeks after dose 2. (By ' + rotateqdose3b.toLocaleDateString() + ').');
                 }
                 else{
-                  firstdose.push('3rd Rotateq dose 4 to 10 weeks after 2nd Rotateq dose. (Between ' + rotateqdose3a.toLocaleDateString() + ' and ' + rotateqdose3b.toLocaleDateString() + ').');
+                  firstdose.push('3rd Rotateq dose (final dose) 4 to 10 weeks after dose 2. (Between ' + rotateqdose3a.toLocaleDateString() + ' and ' + rotateqdose3b.toLocaleDateString() + ').');
                 }
                 $('.rotateq').append('</br>' + firstdose + '</br>');
                 break;
@@ -2774,7 +3028,7 @@ $(document).ready(function(){
       if(poliodates.length==0){
         if(today>poliodose1b){
           if(today>months4 && today<year7){
-            firstdose.push('Missed 1st Polio dose. Catch up schedule:');
+            firstdose.push('1st Polio dose overdue. Catch up schedule:');
             nextdose.push('1st Polio dose today.');
             nextdose.push('2nd Polio dose 4 to 8 weeks after dose 1.');
             if(today<years4){
@@ -2784,15 +3038,15 @@ $(document).ready(function(){
             else{
               nextdose.push('3rd Polio dose (final dose) 6 months after dose 3.');
             }
-            $('.polio').append('</br>' + firstdose + '</br>');
-            $('.poliobutton').append('+');
+            $('.polio').append('</br>' + firstdose + ' ');
+            $('.poliobutton').append('+ </br>');
             for(i=0; i<nextdose.length; i++){
               $('.polio2').append('</br>' + nextdose[i] + '</br>');
             }
             break;
           }
           else{
-            firstdose.push('Missed 1st Polio dose. See physician.');
+            firstdose.push('1st Polio dose overdue. See physician.');
             $('.polio').append('</br>' + firstdose + '</br>');
             break;
           }
@@ -2807,8 +3061,8 @@ $(document).ready(function(){
           nextdose.push('2nd Polio dose between 4 and 6 months old AND 4 to 8 weeks after dose 1.');
           nextdose.push('3rd Polio dose between 6 and 19 months old AND 4 to 8 weeks after dose 2.');
           nextdose.push('4th Polio dose (final dose) after 4 years old.');
-          $('.polio').append('</br>' + firstdose + '</br>');
-          $('.poliobutton').append('+');
+          $('.polio').append('</br>' + firstdose + ' ');
+          $('.poliobutton').append('+ </br>');
           for(i=0; i<nextdose.length; i++){
             $('.polio2').append('</br>' + nextdose[i] + '</br>');
           }
@@ -2831,19 +3085,19 @@ $(document).ready(function(){
         if(poliodates.length==1){
           if(today>poliodose2b){
             if(today>months4 && today<year7){
-              firstdose.push('Missed 2nd Polio dose. Catch up schedule:');
+              firstdose.push('2nd Polio dose overdue. Catch up schedule:');
               nextdose.push('2nd Polio dose today.');
               nextdose.push('3rd Polio dose 4 to 8 weeks after dose 2.');
               nextdose.push('4th Polio dose (final dose) after 4 years old AND 6 months after dose 3.');
-              $('.polio').append('</br>' + firstdose + '</br>');
-              $('.poliobutton').append('+');
+              $('.polio').append('</br>' + firstdose + ' ');
+              $('.poliobutton').append('+ </br>');
               for(i=0; i<nextdose.length; i++){
                 $('.polio2').append('</br>' + nextdose[i] + '</br>');
               }
               break;
             }
             else{
-              firstdose.push('Missed 2nd Polio dose. See physician.');
+              firstdose.push('2nd Polio dose overdue. See physician.');
               $('.polio').append('</br>' + firstdose + '</br>');
               break;
             }
@@ -2857,8 +3111,8 @@ $(document).ready(function(){
             }
             nextdose.push('3rd Polio dose 4 to 9 weeks after dose 2.');
             nextdose.push('4th Polio dose (final dose) after 4 years old.');
-            $('.polio').append('</br>' + firstdose + '</br>');
-            $('.poliobutton').append('+');
+            $('.polio').append('</br>' + firstdose + ' ');
+            $('.poliobutton').append('+ </br>');
             for(i=0; i<nextdose.length; i++){
               $('.polio2').append('</br>' + nextdose[i] + '</br>');
             }
@@ -2883,33 +3137,33 @@ $(document).ready(function(){
           if(poliodates.length==2){
             if(today>poliodose3b){
               if(today<year4){
-                firstdose.push('Missed 3rd Polio dose. Catch up schedule:');
+                firstdose.push('3rd Polio dose overdue. Catch up schedule:');
                 nextdose.push('3rd Polio dose today.');
-                nextdose.push('4th Polio dose after 4 years old AND 6 months after dose 3.');
-                $('.polio').append('</br>' + firstdose + '</br>');
-                $('.poliobutton').append('+');
+                nextdose.push('4th Polio dose (final dose) after 4 years old AND 6 months after dose 3.');
+                $('.polio').append('</br>' + firstdose + ' ');
+                $('.poliobutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.polio2').append('</br>' + nextdose[i] + '</br>');
                 }
                 break;
               }                
               else if(today>year4){
-                firstdose.push('Missed 3rd Polio dose. Catch up schedule: ');
+                firstdose.push('3rd Polio dose overdue. Catch up schedule: ');
                 if(today>polioentry26mos){
                   nextdose.push('3rd Polio dose (final dose) today.');
                 }
                 else{
                   nextdose.push('3rd Polio dose (final dose) 6 months after dose 2. (After ' + polioentry26mos.toLocaleDateString() + ').');
                 }
-                $('.polio').append('</br>' + firstdose + '</br>');
-                $('.poliobutton').append('+');
+                $('.polio').append('</br>' + firstdose + ' ');
+                $('.poliobutton').append('+ </br>');
                 for(i=0; i<nextdose.length; i++){
                   $('.polio2').append('</br>' + nextdose[i] + '</br>');
                 }
                 break;
               }
               else{
-                firstdose.push('Missed 3rd Polio dose. See physician.');
+                firstdose.push('3rd Polio dose overdue. See physician.');
                 $('.polio').append('</br>' + firstdose + '</br>');
                 break;
               }
@@ -2922,8 +3176,8 @@ $(document).ready(function(){
                 firstdose.push('3rd Polio dose between 6 and 19 months old AND 4 to 8 weeks after dose 2. (Between ' + poliodose3a.toLocaleDateString() + ' and ' + poliodose3b.toLocaleDateString() + ').');
               }
               nextdose.push('4th Polio dose (final dose) after 4 years old.');
-              $('.polio').append('</br>' + firstdose + '</br>');
-              $('.poliobutton').append('+');
+              $('.polio').append('</br>' + firstdose + ' ');
+              $('.poliobutton').append('+ </br>');
               for(i=0; i<nextdose.length; i++){
                 $('.polio2').append('</br>' + nextdose[i] + '</br>');
               }
@@ -2946,7 +3200,7 @@ $(document).ready(function(){
         else{
           if(poliodates.length==3){
             if(today>poliodose4b){
-              firstdose.push('Missed 4th Polio dose. See physician.');
+              firstdose.push('4th Polio dose overdue. See physician.');
               $('.polio').append('</br>' + firstdose + '</br>');
               break;
             }
@@ -2991,26 +3245,42 @@ $(document).ready(function(){
     var lastmmr = new Date(lastmmr2.setDate(lastmmr2.getDate()-28));
     var loop = 0;
 
-
     do{
       var firstdose=[];
       var nextdose=[];
       if(mmrdates.length==0){
         if(today>mmrdose1b){
           if(today<lastmmr){
-            firstdose.push('Missed 1st MMR dose. Catch up schedule:');
+            firstdose.push('1st MMR dose overdue. Catch up schedule:');
             nextdose.push('1st MMR dose today.');
             nextdose.push('2nd MMR dose (final dose) 4 weeks after dose 1.');
-            $('.mmr').append('</br>' + firstdose + '</br>');
-            $('.mmrbutton').append('+');
+            $('.mmr').append('</br>' + firstdose + ' ');
+            $('.mmrbutton').append('+ </br>');
             for(i=0; i<nextdose.length; i++){
               $('.mmr2').append('</br>' + nextdose[i] + '</br>');
             }
             break;            
           }
-          firstdose.push('Missed 1st MMR dose. See physician.');
-          $('.mmr').append('</br>' + firstdose + '</br>');
-          break;
+          else{
+            firstdose.push('1st MMR dose overdue. See physician.');
+            $('.mmr').append('</br>' + firstdose + '</br>');
+            break;
+          }
+        }
+        else{
+          if(today>mmrdose1a){
+            firstdose.push('1st MMR dose between 12 and 15 months old. (By ' + mmrdose1b.toLocaleDateString() + ').');
+          }
+          else{
+            firstdose.push('1st MMR dose between 12 and 15 months old. (Between ' + mmrdose1a.toLocaleDateString() + ' and ' + mmrdose1b.toLocaleDateString() + ').');
+          }
+          nextdose.push('2nd MMR dose (final dose) between 4 and 6 years old. (Between ' + mmrdose2a.toLocaleDateString() + ' and ' + mmrdose2b.toLocaleDateString() + ').');
+          $('.mmr').append('</br>' + firstdose + ' ');
+          $('.mmrbutton').append('+ </br>');
+          for(i=0; i<nextdose.length; i++){
+            $('.mmr2').append('</br>' + nextdose[i] + '</br>');
+          }
+          break;  
         }
       }
 
@@ -3027,7 +3297,7 @@ $(document).ready(function(){
       else{
         if(mmrdates.length==1){
           if(today>mmrdose2b){
-            firstdose.push('Missed 2nd MMR dose. See physician.');
+            firstdose.push('2nd MMR dose overdue. See physician.');
             $('.mmr').append('</br>' + firstdose + '</br>');
             break;
           }
@@ -3049,17 +3319,27 @@ $(document).ready(function(){
         $('.mmr').append('</br>' + firstdose + '</br>');
         break;
       }
-      else{
+      else if(mmrentry2>mmrdose2b){
         firstdose.push('2nd MMR dose administered too late. See physician.');
         $('.mmr').append('</br>' + firstdose + '</br>');
         break;
       }
 
-  
-
       loop =1;
     }
     while(loop=0);
+
+    var varicellaentry1 = new Date(varicelladates[0]);
+    var varicellaentry2 = new Date(varicelladates[1]);
+    birthday = new Date(birthdayvalue);
+    var varicelladose1a = new Date(birthday.setDate(birthday.getDate()+12));
+    birthday = new Date(birthdayvalue);
+    var varicelladose1b = new Date(birthday.setDate(birthday.getDate()+16));
+    birthday = new Date(birthdayvalue);
+    var varicelladose2a = new Date(birthday.setFullYear(birthday.getFullYear()+4));
+    birthday = new Date(birthdayvalue);
+    var varicelladose2b = new Date(birthday.setFullYear(birthday.getFullYear()+7));
+    birthday = new Date(birthdayvalue);
 
 
 
@@ -3141,7 +3421,7 @@ $(document).ready(function(){
   $('.rotateqbutton').click(function(){
     if(bonjour==0){
       $('.rotateq2').slideDown();
-      hey=1;
+      bonjour=1;
     }
     else{
       $('.rotateq2').slideUp();
@@ -3171,6 +3451,23 @@ $(document).ready(function(){
       $('.mmr2').slideUp();
       hi=0;
     }
+  });
+
+  var pizza=0;
+  $('.varicellabutton').click(function(){
+    if(pizza==0){
+      $('.varicella2').slideDown();
+      pizza=1;
+    }
+    else{
+      $('.varicella2').slideUp();
+      pizza=0;
+    }
+  });
+
+  $('#add').click(function(){
+    $('#add').hide();
+    $('#addName').hide();
   });
   
   
