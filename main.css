@@ -1,12 +1,14 @@
+
 .entry1 {
-  display: none;}
+  	display: none;}
+
 
 .entry2 {
 	display: none;
 }
 
 .entry3 {
-  display: none;}
+  	display: none;}
 
 .entry4 {
 	display: none;
@@ -93,4 +95,48 @@
 }
 .dosedates8 {
 	display: none;
+}
+
+#container {
+	text-align: center;
+}
+
+.dtap, .dtapbutton {
+	display: inline;
+}
+
+.hepb, .hepbbutton {
+	display: inline;
+}
+
+.hib, .hibbutton {
+	display: inline;
+}
+
+.pedvax, .pedvaxbutton {
+	display: inline;
+}
+
+.pcv, .pcvbutton {
+	display: inline;
+}
+
+.rotarix, .rotarixbutton {
+	display: inline;
+}
+
+.rotateq, .rotateqbutton {
+	display: inline;
+}
+
+.polio, .poliobutton {
+	display: inline;
+}
+
+.mmr, .mmrbutton {
+	display: inline;
+}
+
+.varicella, .varicellabutton {
+	display: inline;
 }
