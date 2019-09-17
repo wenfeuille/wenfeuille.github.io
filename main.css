@@ -140,3 +140,7 @@
 .varicella, .varicellabutton {
 	display: inline;
 }
+
+#add {
+	color: blue;
+}
